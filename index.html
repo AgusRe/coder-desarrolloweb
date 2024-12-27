@@ -51,32 +51,37 @@
         </nav>
     </header>
 
-    <!--Tipos de enlace-->
-    <!--Enlace absoluto (lleva a un sitio web externo)-->
-    <!--Puede ser una imagen o un texto-->
-    <!--La url a la que te redirige es la que esté en href-->
-    <!--El target blank lo que hace es que te lleva a la otra página pero en una nueva pestaña-->
-
-
     <main> <!--Contenido principal-->
         <!--Division de contenido por temática-->
 
         <section class="info"> <!--Logo, slides e información de promociones-->
             
-            <button class="left-button">
-            </button>
-        
-
-            <p>Logo, slides e información de promociones</p>
-
-
-            <button class="right-button">
-            </button>
+            <!-- Uso de Bootstrap doc para generar un carrusel -->
+            <div id="carouselExampleFade" class="carousel slide carousel-fade">
+                <div class="hero carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="./img/carrusel_banner.png" class="d-block w-100" alt="">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="./img/carrusel_sale.png" class="d-block w-100" alt="">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="./img/carrusel_envios.png" class="d-block w-100" alt="">
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Anterior</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Siguiente</span>
+                </button>
+            </div>
 
         </section>
 
-        <section class="destacados"> <!--Productos destacados--> 
-            <h2>Destacados</h2>
+        <section class="destacados">
             
             <div class="destacados-box">
                 <button class="left-button">
@@ -87,94 +92,34 @@
                     <!-- Producto 1 -->
                     <div class="producto">
                         <img src="./img/destacados-producto-1.jpeg" alt="Producto">
-                        <p class="nombre-prenda">Nombre de la Prenda 1</p>
+                        <p class="nombre-prenda">Musculosa Wild Fire Blanca</p>
                         <p class="precio-prenda">$9500</p>
                     </div>
                 
                     <!-- Producto 2 -->
                     <div class="producto">
                         <img src="./img/destacados-producto-2.jpeg" alt="Producto">
-                        <p class="nombre-prenda">Remera musculosa mujer</p>
+                        <p class="nombre-prenda">Musculosa Wild Fire Blanca</p>
                         <p class="precio-prenda">$10500</p>
                     </div>
                 
                     <!-- Producto 3 -->
                     <div class="producto">
                         <img src="./img/destacados-producto-3.jpeg" alt="Producto">
-                        <p class="nombre-prenda">Remera musculosa mujer</p>
+                        <p class="nombre-prenda">Musculosa mujer</p>
                         <p class="precio-prenda">$10500</p>
                     </div>
 
                     <!-- Producto 4 -->
                     <div class="producto">
                         <img src="./img/destacados-producto-4.jpeg" alt="Producto">
-                        <p class="nombre-prenda">Remera musculosa mujer</p>
+                        <p class="nombre-prenda">Musculosa mujer</p>
                         <p class="precio-prenda">$10500</p>
                     </div>
-
-                    <!-- Producto 5 -->
-                    <div class="producto">
-                        <img src="./img/destacados-producto-5.jpeg" alt="Producto">
-                        <p class="nombre-prenda">Remera musculosa mujer</p>
-                        <p class="precio-prenda">$10500</p>
-                    </div>
-
-                    <!-- Producto 6 -->
-                    <div class="producto">
-                        <img src="./img/destacados-producto-6.jpeg" alt="Producto">
-                        <p class="nombre-prenda">Remera musculosa mujer</p>
-                        <p class="precio-prenda">$10500</p>
-                    </div>
-
-                    <!-- Producto 7 -->
-                    <div class="producto">
-                        <img src="./img/destacados-producto-7.jpeg" alt="Producto">
-                        <p class="nombre-prenda">Remera musculosa mujer</p>
-                        <p class="precio-prenda">$10500</p>
-                    </div>
-
-                    <!-- Producto 8 -->
-                    <div class="producto">
-                        <img src="./img/destacados-producto-8.jpeg" alt="Producto">
-                        <p class="nombre-prenda">Remera musculosa mujer</p>
-                        <p class="precio-prenda">$10500</p>
-                    </div>
-
-                    <!-- Producto 9 -->
-                    <div class="producto">
-                        <img src="./img/destacados-producto-9.jpeg" alt="Producto">
-                        <p class="nombre-prenda">Remera musculosa mujer</p>
-                        <p class="precio-prenda">$10500</p>
-                    </div>
-
-                    <!-- Producto 10 -->
-                    <div class="producto">
-                        <img src="./img/destacados-producto-10.jpeg" alt="Producto">
-                        <p class="nombre-prenda">Remera musculosa mujer</p>
-                        <p class="precio-prenda">$10500</p>
-                    </div>
-
-                    <!-- Producto 11 -->
-                    <div class="producto">
-                        <img src="./img/destacados-producto-11.jpeg" alt="Producto">
-                        <p class="nombre-prenda">Remera musculosa mujer</p>
-                        <p class="precio-prenda">$10500</p>
-                    </div>
-
-                    <!-- Producto 12 -->
-                    <div class="producto">
-                        <img src="./img/destacados-producto-12.jpeg" alt="Producto">
-                        <p class="nombre-prenda">Remera musculosa mujer</p>
-                        <p class="precio-prenda">$10500</p>
-                    </div>
+                    
                 </div>
-                
-    
-                <button class="right-button">
-                </button>
-            </div>
-            
-            
+               <button class="right-button">
+            </button>
         </section>
 
         <section class="etiquetas"> <!--Etiquetas separadas por tipo-->
@@ -231,7 +176,6 @@
                 <div>
                     <a href="">
                         <img src="./img/whatsapp.png" alt="Redireccionamiento a contacto por whatsapp" target="_blank">
-                        5493421111111
                     </a>
                 </div>
             </div>

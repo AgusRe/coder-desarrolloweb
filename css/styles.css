@@ -151,22 +151,54 @@ p {
     color: #fff;
 }
 
+@media (max-width: 768px) {
+    .header .logo a img {
+      width: 80px;
+      height: 80px;
+    }
+  
+    .header .barra-busqueda {
+      width: 15%;
+    }
+  
+    .header .header-icons img {
+      width: 30px;
+      height: 30px;
+    }
+  
+    .menu ul li a {
+      font-size: 18px;
+    }
+  }
+
 /* MAIN */
 
 main {
-    padding: 10px;
+    padding: 0px;
 }
 
 /* Seccion de Informacion*/
 
 .info {
-    background-color: #a3a2a2;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.carousel-item img {
+    height: 75vh;
+    width: 100%;
+    object-fit: fill;
 }
 
 /* Seccion de destacados */
+
 .destacados {
+    display: flex;
+    align-items: baseline;
+    position: relative;
     padding: 20px;
-    background-color: #f9f9f9;
+    background-color: #666060; /*#f9f9f9*/
+    max-width: 100%;
 }
 
 .destacados h2 {
@@ -176,27 +208,24 @@ main {
     margin-bottom: 30px;
 }
 
-.destacados .destacados-box {
-    display: flex;
-    align-items: baseline;
-    position: relative;
-}
+/*
+Intento de carrusel por mí parte. Fallido.
+*/
 
 .destacados .destacados-box .productos {
     display: flex;
-    overflow: hidden;
-    gap: 20px;
-    overflow-x: auto; /* Permite desplazamiento horizontal */
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
+    gap: 20px;
     flex: 1;
-    padding: 0 40px; /* Espaciado dentro del contenedor */
 }
 
 .destacados .destacados-box .productos .producto {
     border: 1px solid #ddd;
     padding: 20px;
     text-align: center;
-    width: 220px; /* Tamaño uniforme */
+    width: 220px;
     background-color: #fff;
     display: flex;
     flex-direction: column;
@@ -204,7 +233,7 @@ main {
     align-items: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
-    flex-shrink: 0; /* Evita que los productos se reduzcan */
+    flex-shrink: 0;
 }
 
 .destacados .destacados-box .productos .producto img {
@@ -222,24 +251,24 @@ main {
     color: #333;
 }
 
-.destacados .destacados-box .productos .producto .precio-prenda {
+.productos .producto .precio-prenda {
     font-size: 1.2em;
     color: #000;
     font-weight: bold;
     margin-bottom: 10px;
 }
 
-
-.destacados .destacados-box .left-button {
+.left-button {
     left: 10px;
 }
 
-.destacados .destacados-box .right-button {
+.right-button {
     right: 10px;
 }
 
 
 /* Sección de etiquetas */
+
 /* Flexbox de etiquetas*/
 .etiquetas {
     padding: 10px;
@@ -347,3 +376,45 @@ footer img {
     border-radius: 50%;
 }
 
+
+/*************** PRODUCTO ***************/
+
+/* Estilo para las miniaturas */
+.img-thumbnail {
+    border: 2px solid #000;
+    cursor: pointer;
+    width: 100px;
+    height: auto;
+    transition: border-color 0.3s ease;
+}
+
+.img-thumbnail:hover {
+    border-color: #666;
+}
+
+/* Estilo para la imagen principal */
+.zoom-container {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    margin: auto;
+    cursor: zoom-in;
+}
+
+.zoom-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+/* Efecto de zoom */
+.zoom-container:hover .zoom-image {
+    transform: scale(1.5);
+}
+
+button:focus {
+    outline: none;
+    box-shadow: none;
+}
