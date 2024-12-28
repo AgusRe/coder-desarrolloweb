@@ -5,11 +5,47 @@
     padding: 0;
 }
 
-/* selector < clase < id */
-
-/*************** INDEX ***************/
-
 /* FA */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.6rem;
+    }
+
+    p, label, input, textarea {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    body {
+        font-size: 12px; 
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+    }
+
+    p, label, input, textarea {
+        font-size: 0.9rem;
+    }
+
+    button {
+        font-size: 1rem;
+    }
+}
+
 h1 {
     font-family: "Funnel Display", sans-serif;
 }
@@ -22,6 +58,7 @@ p {
     font-family: "Funnel Display", sans-serif;
 }
 
+/*************** INDEX ***************/
 
 .left-button {
     font-family: "Funnel Display", sans-serif;
@@ -71,6 +108,11 @@ p {
     height: 40px;
     margin-left: 15px;
     cursor: pointer;
+    outline: none;
+}
+
+.header .header-icons a {
+    text-decoration: none;
     outline: none;
 }
 
@@ -153,23 +195,29 @@ p {
 
 @media (max-width: 768px) {
     .header .logo a img {
-      width: 80px;
-      height: 80px;
+        width: 80px;
+        height: 80px;
     }
   
     .header .barra-busqueda {
-      width: 15%;
+        display: 15%;
     }
   
     .header .header-icons img {
-      width: 30px;
-      height: 30px;
+        width: 30px;
+        height: 30px;
     }
   
     .menu ul li a {
-      font-size: 18px;
+        font-size: 18px;
     }
-  }
+}
+
+@media (max-width: 480px) {
+    .header .barra-busqueda {
+      display: none;
+    }
+} 
 
 /* MAIN */
 
@@ -190,38 +238,32 @@ main {
     object-fit: fill;
 }
 
-/* Seccion de destacados */
-
+/* Sección de destacados */
 .destacados {
     display: flex;
-    align-items: baseline;
+    flex-direction: column;
+    align-items: center;
     position: relative;
     padding: 20px;
-    background-color: #666060; /*#f9f9f9*/
+    background-color: #f9f9f9;
     max-width: 100%;
 }
 
-.destacados h2 {
-    text-align: center;
-    font-size: 2.5em;
-    font-weight: bold;
-    margin-bottom: 30px;
-}
-
-/*
-Intento de carrusel por mí parte. Fallido.
-*/
-
-.destacados .destacados-box .productos {
+.destacados-box {
     display: flex;
-    overflow-x: scroll;
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
+    justify-content: center;
+    flex-wrap: wrap;
     gap: 20px;
-    flex: 1;
 }
 
-.destacados .destacados-box .productos .producto {
+.productos {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.productos .producto {
     border: 1px solid #ddd;
     padding: 20px;
     text-align: center;
@@ -234,9 +276,11 @@ Intento de carrusel por mí parte. Fallido.
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     flex-shrink: 0;
+    min-height: 350px; /* Altura mínima para uniformar los productos */
+    max-height: 350px; /* Altura máxima */
 }
 
-.destacados .destacados-box .productos .producto img {
+.productos .producto img {
     width: 100%;
     height: auto;
     max-height: 180px;
@@ -244,7 +288,7 @@ Intento de carrusel por mí parte. Fallido.
     border-radius: 8px;
 }
 
-.destacados .destacados-box .productos .producto .nombre-prenda {
+.productos .producto .nombre-prenda {
     font-size: 1em;
     margin: 10px 0;
     font-weight: 500;
@@ -258,58 +302,89 @@ Intento de carrusel por mí parte. Fallido.
     margin-bottom: 10px;
 }
 
-.left-button {
-    left: 10px;
+@media (max-width: 768px) {
+    .productos {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .productos .producto {
+        width: 100%;
+        max-width: 300px;
+    }
 }
 
-.right-button {
-    right: 10px;
+@media (max-width: 480px) {
+    .productos .producto {
+        width: 90%;
+    }
 }
-
 
 /* Sección de etiquetas */
-
-/* Flexbox de etiquetas*/
 .etiquetas {
-    padding: 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 15px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
     text-align: center;
 }
 
 .etiquetas-item {
-    flex-basis: 32%;
-    flex-direction: column;
-    cursor: pointer;
     position: relative;
     overflow: hidden;
     border-radius: 15px;
     background-color: #666060;
+    cursor: pointer;
 }
 
 .etiquetas-item img {
-    display: flex;
-    background-image: no-repeat;
-    background-size: cover;
-    background-position: center;
-    height: 700px;
-    width: auto;
+    width: 100%;
+    height: auto;
+    max-height: 500px;
+    object-fit: cover;
+    border-radius: 15px;
     display: block;
 }
 
 .etiquetas-item p {
     position: absolute;
-    bottom: 50%;
-    left: 50%;
-    transform: translate(-50%, 50%);
-    margin: 0;
-    padding: 5px 10px;
-    font-size: 3rem;
+    bottom: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    font-size: 1.5rem;
     font-weight: bold;
+    margin: 0;
+    padding: 10px;
+    text-align: center;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
 }
+
+@media (max-width: 768px) {
+    .etiquetas {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .etiquetas-item img {
+        max-height: 250px;
+    }
+
+    .etiquetas-item p {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .etiquetas {
+        grid-template-columns: 1fr;
+    }
+
+    .etiquetas-item img {
+        max-height: 200px;
+    }
+}
+
 
 /* FOOTER */
 
@@ -322,7 +397,6 @@ footer {
     gap: 20px;
 }
 
-/* Contenedor para las primeras secciones */
 footer .bloque-superior {
     display: flex;
     flex-flow: column;
@@ -330,7 +404,6 @@ footer .bloque-superior {
     flex: 1;
 }
 
-/* Contenedor para los métodos de pago y envío */
 footer .metodos {
     display: flex;
     flex-direction: column;
@@ -338,21 +411,19 @@ footer .metodos {
     flex: 1;
 }
 
-/* Títulos */
 footer h2 {
     font-size: 1.5em;
     margin-bottom: 10px;
 }
 
-/* Lista de categorías */
 .footer-nav ul {
-    list-style-type: none; /* Quita los puntos de las listas */
+    list-style-type: none;
     padding: 0;
     margin: 0;
 }
 
 .footer-nav ul li {
-    margin: 10px 0; /* Espaciado entre los elementos */
+    margin: 10px 0;
 }
 
 .footer-nav ul li a {
@@ -369,7 +440,6 @@ footer .bloque-superior div a{
     color: black;
 }
 
-/* Estilo para imágenes */
 footer img {
     width: 40px;
     height: 40px;
@@ -409,7 +479,6 @@ footer img {
     transition: transform 0.3s ease;
 }
 
-/* Efecto de zoom */
 .zoom-container:hover .zoom-image {
     transform: scale(1.5);
 }
@@ -417,4 +486,134 @@ footer img {
 button:focus {
     outline: none;
     box-shadow: none;
+}
+
+/*************** FAQ ***************/
+
+.header--menu {
+    /* Debería de esconderse cuando se scrollea pero no pude conseguir hacerlo */
+}
+
+.main--faq {
+    background-image: url(../img/faq-background.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-bottom: 50px;
+    padding-top: 50px;
+}
+
+.main--faq div {
+    align-items: center;
+    background-color: #f9f9f9;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px;
+    line-height: 1.6;
+
+}
+
+.main--faq h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 20px;
+    color: black;
+}
+
+.main--faq details {
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    transition: all 0.3s ease;
+}
+
+.main--faq summary {
+    font-size: 1.8rem;
+    cursor: pointer;
+    list-style: none;
+    outline: none;
+    color: black;
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main--faq p {
+    font-size: 1.2rem;
+    color: #666;
+    margin-top: 10px;
+    padding-left: 10px;
+}
+
+.main--faq summary::after {
+    content: "▼";
+    font-size: 1rem;
+    margin-left: 10px;
+    transform: rotate(0deg);
+    transition: transform 0.35s ease;
+}
+
+.main--faq details[open] summary::after {
+    transform: rotate(-180deg);
+}
+
+/* Otras preguntas: */
+
+
+/* Ajustar el ancho de la cápsula "¿Tienes otra pregunta?" */
+.faq--mail {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 1100px;
+    margin: 30px auto;
+}
+
+.faq--mail h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.form-preguntas {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-preguntas label {
+    font-size: 1.2rem;
+    text-align: left;
+    color: #555;
+}
+
+.form-preguntas input, .form-preguntas textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-family: Arial, sans-serif;
+    resize: none;
+}
+
+.form-preguntas button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #007BFF;
+    color: white;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form-preguntas button:hover {  
+    background-color: #0056b3;
 }
