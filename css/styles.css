@@ -258,15 +258,17 @@ main {
 
 .productos {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     gap: 20px;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
 }
 
+/* Probando enlazar la imagen del producto a su correspondiente pagina */
+
 .productos .producto {
-    border: 1px solid #ddd;
-    padding: 20px;
     text-align: center;
+    border: 1px solid #ddd;
+    padding: 0;
     width: 220px;
     background-color: #fff;
     display: flex;
@@ -276,11 +278,24 @@ main {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     flex-shrink: 0;
-    min-height: 350px; /* Altura mínima para uniformar los productos */
-    max-height: 350px; /* Altura máxima */
+    min-height: 350px;
+    max-height: 350px;
 }
 
-.productos .producto img {
+.productos .producto a {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%; 
+    height: 100%; 
+    padding: 20px; 
+    text-decoration: none;
+    color: inherit;
+    border-radius: 10px;
+}
+
+.productos .producto a img {
     width: 100%;
     height: auto;
     max-height: 180px;
@@ -288,29 +303,33 @@ main {
     border-radius: 8px;
 }
 
-.productos .producto .nombre-prenda {
+.productos .producto a .nombre-prenda {
     font-size: 1em;
     margin: 10px 0;
     font-weight: 500;
     color: #333;
 }
 
-.productos .producto .precio-prenda {
+.productos .producto a .precio-prenda {
     font-size: 1.2em;
     color: #000;
     font-weight: bold;
     margin-bottom: 10px;
 }
 
+/* Fin de test */
+
 @media (max-width: 768px) {
     .productos {
-        flex-direction: column;
-        align-items: center;
+        flex-direction: row;
+        justify-content: center;
+        align-items: stretch;
     }
 
     .productos .producto {
         width: 100%;
         max-width: 300px;
+        height: auto;
     }
 }
 
@@ -785,5 +804,128 @@ button:focus {
 
     .contacto-form button {
         font-size: 1rem;
+    }
+}
+
+/*************** Main Cuenta ***************/
+
+.main--cuenta {
+    display: flex;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.menu-lateral {
+    width: 250px;
+    background-color: #ffffff;
+    padding: 10px;
+    border-right: 1px solid #ddd;
+    border-radius: 10px;
+}
+
+.menu-lateral ul {
+    list-style: none;
+    padding: 0;
+}
+
+.menu-lateral ul li {
+    margin: 10px 0;
+}
+
+.menu-lateral ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1rem;
+    padding: 10px;
+    display: block;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.menu-lateral ul li a:hover, .menu-lateral ul li a.active {
+    background-color: #007BFF;
+    color: #fff;
+}
+
+.contenido-principal {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.perfil-usuario {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.perfil-usuario .avatar {
+    width: 60px;
+    height: 60px;
+    background-color: #ddd;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.perfil-usuario .info-usuario h1 {
+    font-size: 1.5rem;
+    margin: 0;
+    color: #333;
+}
+
+.perfil-usuario .info-usuario p {
+    margin: 5px 0;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.opciones-cuenta {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.opciones-cuenta .opcion {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.opciones-cuenta .opcion h2 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.opciones-cuenta .opcion p {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+@media (max-width: 768px) {
+    .main--cuenta {
+        flex-direction: column;
+    }
+
+    .menu-lateral {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #ddd;
     }
 }
