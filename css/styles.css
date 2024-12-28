@@ -617,3 +617,173 @@ button:focus {
 .form-preguntas button:hover {  
     background-color: #0056b3;
 }
+
+
+/*************** Servicios ***************/
+
+.main--servicios {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9; 
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    line-height: 1.6;
+}
+
+
+.main--servicios h1 {
+    font-size: 2.5rem; 
+    color: #333; 
+    text-align: center; 
+    margin-bottom: 20px; 
+    text-transform: uppercase; 
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+}
+
+.main--servicios h3 {
+    font-size: 1.8rem;
+    color: black;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    border-left: 5px solid black;
+    padding-left: 10px;
+}
+
+.main--servicios p {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+@media (max-width: 768px) {
+    .main--servicios {
+        padding: 15px;
+    }
+
+    .main--servicios h1 {
+        font-size: 2rem;
+    }
+
+    .main--servicios h3 {
+        font-size: 1.5rem;
+    }
+
+    .main--servicios p {
+        font-size: 1rem; 
+    }
+}
+
+@media (max-width: 576px) {
+    .main--servicios {
+        padding: 10px;
+    }
+
+    .main--servicios h1 {
+        font-size: 1.8rem
+    }
+
+    .main--servicios h3 {
+        font-size: 1.3rem;
+    }
+
+    .main--servicios p {
+        font-size: 0.9rem;
+    }
+}
+
+/*************** Contacto ***************/
+
+.main--contacto {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 40px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    line-height: 1.6;
+}
+
+.main--contacto h1 {
+    font-size: 2.5rem;
+    color: black;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+}
+
+.main--contacto p {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.contacto-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contacto-form label {
+    font-size: 1rem;
+    color: #555;
+    text-align: left;
+}
+
+.contacto-form input,
+.contacto-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    resize: none;
+}
+
+.contacto-form button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #007BFF;
+    color: white;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contacto-form button:hover {
+    background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+    .main--contacto {
+        padding: 20px;
+    }
+
+    .main--contacto h1 {
+        font-size: 2rem;
+    }
+
+    .main--contacto p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .main--contacto h1 {
+        font-size: 1.8rem;
+    }
+
+    .main--contacto p {
+        font-size: 0.9rem;
+    }
+
+    .contacto-form button {
+        font-size: 1rem;
+    }
+}

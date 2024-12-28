@@ -50,9 +50,26 @@
         </nav>
     </header>
 
-    <main>
-
+    <main class="main main--contacto">
+        <div class="contacto-container">
+            <h1>Contáctanos</h1>
+            <p>¿Tienes alguna duda o necesitas ayuda? Rellena el formulario o contáctanos a través de nuestras redes sociales.</p>
+            
+            <form action="#" method="post" class="contacto-form">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Tu nombre completo" required>
+                
+                <label for="email">Correo electrónico:</label>
+                <input type="email" id="email" name="email" placeholder="Tu correo electrónico" required>
+                
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" name="mensaje" placeholder="Escribe tu mensaje aquí..." rows="5" required></textarea>
+                
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
     </main>
+    
 
     <footer> <!-- Pie de página -->
 
