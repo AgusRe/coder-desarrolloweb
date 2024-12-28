@@ -50,8 +50,43 @@
         </nav>
     </header>
 
-    <main>
+    <main class="main main--carrito">
+        <h1>Carrito de Compras</h1>
 
+        <!-- Lista de productos -->
+        <div class="carrito-productos">
+            <div class="producto">
+                <img src="../img/destacados-producto-1.jpeg" alt="Producto 1">
+                <div class="info-producto">
+                    <h2>Producto 1</h2>
+                    <p>Precio: $9500</p>
+                    <div class="cantidad">
+                        <label for="cantidad1">Cantidad:</label>
+                        <input type="number" id="cantidad1" value="1" min="1">
+                    </div>
+                </div>
+                <button class="eliminar">Eliminar</button>
+            </div>
+
+            <div class="producto">
+                <img src="../img/destacados-producto-2.jpeg" alt="Producto 2">
+                <div class="info-producto">
+                    <h2>Producto 2</h2>
+                    <p>Precio: $10500</p>
+                    <div class="cantidad">
+                        <label for="cantidad2">Cantidad:</label>
+                        <input type="number" id="cantidad2" value="1" min="1">
+                    </div>
+                </div>
+                <button class="eliminar">Eliminar</button>
+            </div>
+        </div>
+
+        <!-- Total y botones -->
+        <div class="carrito-total">
+            <p>Total: <span>$20000</span></p>
+            <button class="btn-pagar">Proceder al pago</button>
+        </div>
     </main>
 
     <footer> <!-- Pie de página -->
