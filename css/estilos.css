@@ -12,6 +12,14 @@ h2 {
   font-family: "Funnel Display", sans-serif;
 }
 
+h3 {
+  font-family: "Funnel Display", sans-serif;
+}
+
+.nav-link {
+  font-family: "Funnel Display", sans-serif;
+}
+
 p {
   font-family: "Funnel Display", sans-serif;
 }
@@ -21,6 +29,7 @@ p {
   top: 0;
   z-index: 1000;
   background-color: black;
+  padding: 5px 0;
 }
 
 .header {
@@ -33,7 +42,7 @@ p {
   padding: 5px;
   width: 40px;
   height: 40px;
-  margin-left: 15px;
+  margin-left: 30px;
   cursor: pointer;
   outline: none;
 }
@@ -42,8 +51,8 @@ p {
   outline: none;
 }
 .header .logo a img {
-  width: 120px;
-  height: 120px;
+  width: 100px;
+  height: 100px;
   object-fit: fill;
 }
 .header .barra-busqueda {
@@ -79,35 +88,17 @@ p {
   object-fit: contain;
 }
 
-.menu {
-  text-align: center;
-  background-color: black;
-  border-top: 1px solid rgba(221, 221, 221, 0.6980392157);
-  border-bottom: 1px solid rgba(221, 221, 221, 0.6980392157);
-  padding: 10px 0;
+.navbar-nav {
+  --bs-nav-link-color: white;
 }
-.menu ul {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  list-style: none;
-  margin: 0;
-  padding: 0;
+
+.navbar-dark {
+  border-top: 1px solid rgba(255, 255, 255, 0.3882352941);
 }
-.menu ul li {
-  display: inline;
-}
-.menu ul li a {
+
+.nav-item .nav-link {
   text-decoration: none;
-  color: #ffffff;
-  font-size: 24px;
-  font-weight: bold;
-  padding: 5px 10px;
-  border-radius: 5px;
-}
-.menu ul li a:hover {
-  background-color: #444;
-  color: #fff;
+  color: white;
 }
 
 main {
@@ -335,9 +326,12 @@ button:focus {
   border-radius: 8px;
   padding: 10px;
   background-color: #f9f9f9;
-  transition: all 0.3s ease;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
 }
-.main--faq summary {
+.main--faq details[open] {
+  background-color: #eef6ff;
+}
+.main--faq details summary {
   font-size: 1.8rem;
   cursor: pointer;
   list-style: none;
@@ -348,13 +342,7 @@ button:focus {
   justify-content: space-between;
   align-items: center;
 }
-.main--faq p {
-  font-size: 1.2rem;
-  color: #666;
-  margin-top: 10px;
-  padding-left: 10px;
-}
-.main--faq summary::after {
+.main--faq details summary::after {
   content: "▼";
   font-size: 1rem;
   margin-left: 10px;
@@ -363,6 +351,18 @@ button:focus {
 }
 .main--faq details[open] summary::after {
   transform: rotate(-180deg);
+}
+.main--faq details p {
+  font-size: 1.2rem;
+  color: #666;
+  margin-top: 10px;
+  padding-left: 10px;
+  overflow: hidden;
+  transition: max-height 0.35s ease, opacity 0.35s ease;
+}
+details[open] .main--faq details p {
+  max-height: 1000px;
+  opacity: 1;
 }
 .main--faq .faq--mail {
   margin-top: 40px;
@@ -831,6 +831,18 @@ footer {
     text-align: center;
   }
 }
+@media (min-width: 576px) and (max-width: 768px) {
+  .header .barra-busqueda {
+    margin: 5px 0;
+  }
+  .header .barra-busqueda input {
+    width: 70%;
+  }
+  .header .header-icons img {
+    width: 30px;
+    height: 30px;
+  }
+}
 @media (max-width: 576px) {
   body {
     font-size: 12px;
@@ -875,14 +887,26 @@ footer {
   .contacto-form button {
     font-size: 1rem;
   }
+  .header {
+    align-items: center;
+  }
+  .header .logo a img {
+    width: 70px;
+  }
   .header .barra-busqueda {
     display: none;
+  }
+  .header .header-icons {
+    display: flex;
+    justify-content: center;
+  }
+  .header .header-icons img {
+    width: 30px;
+    height: 30px;
+    margin: 0 5px;
   }
 }
 @media (max-width: 480px) {
-  .header .barra-busqueda {
-    display: none;
-  }
   .productos .producto {
     width: 90%;
   }

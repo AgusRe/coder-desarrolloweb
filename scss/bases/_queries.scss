@@ -104,6 +104,22 @@
     }
 }
 
+@media (min-width: 576px) and (max-width: 768px) {
+    .header {
+        .barra-busqueda {
+            margin: 5px 0;
+            input {
+                width: 70%;
+            }
+        }
+
+        .header-icons img {
+            width: 30px; 
+            height: 30px;
+        }
+    }
+}
+
 @media (max-width: 576px) {
     body {
         font-size: 12px; 
@@ -163,19 +179,29 @@
     }
 
     .header {
+        align-items: center;
+
+        .logo a img {
+            width: 70px;
+        }
+        //* No conseguí hacer que quede únicamente la lupa por lo que dejo display none de momento. Vi que se puede lograr con javascript pero de momento no nos enseñaron eso.
         .barra-busqueda {
-            display: none; //* Falta ver esto, tengo que buscar la forma de que se achique también con la lupita.
+            display: none;
+        }
+
+        .header-icons {
+            display: flex;
+            justify-content: center;
+            img {
+                width: 30px;
+                height: 30px;
+                margin: 0 5px;
+            }
         }
     }
 }
 
 @media (max-width: 480px) {
-    .header { //* Falta ver mejor esto.
-        .barra-busqueda {
-            display: none;
-        }
-    }
-
     .productos .producto {
         width: 90%;
     }

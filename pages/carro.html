@@ -17,36 +17,50 @@
             <div class="logo">
                 <a href="../index.html">
                     <img src="../img/crossover-logo2.jpeg" alt="Icono del Logo">
-                </a> 
+                </a>
             </div>
-
+    
+            <!-- Barra de búsqueda -->
             <div class="barra-busqueda">
                 <input type="text" placeholder="Buscar..." />
-                <button><img src="../img/header-search.png" alt=""></button>
+                <button><img src="../img/header-search.png" alt="Buscar" /></button>
             </div>
-
-            <div class="header-icons">
-                <a href="./contacto.html" alt="Ayuda">
-                    <img src="../img/whelp.png" alt="Ir a contacto">
-                </a> 
     
-                <a href="./cuenta.html" alt="Cuenta">
-                    <img src="../img/wuser.png" alt="Ir a cuenta">
+            <!-- Íconos del header -->
+            <div class="header-icons">
+                <a href="../pages/contacto.html">
+                    <img src="../img/whelp.png" alt="Ir a contacto" />
                 </a>
-
-                <a href="./carro.html" alt="Carrito de compras">
-                    <img src="../img/wcart.png" alt="Ir al carrito de compras">
+                <a href="../pages/cuenta.html">
+                    <img src="../img/wuser.png" alt="Ir a cuenta" />
+                </a>
+                <a href="../pages/carro.html">
+                    <img src="../img/wcart.png" alt="Ir al carrito de compras" />
                 </a>
             </div>
         </div>
-
-        <nav class="menu header--menu">
-            <ul>
-                <li><a href="../index.html">Inicio</a></li>
-                <li><a href="./productos.html">Productos</a></li>
-                <li><a href="./servicios.html">Servicios</a></li>
-                <li><a href="./faq.html">Preguntas frecuentes</a></li>
-            </ul>
+    
+        <!-- Barra de navegación con Bootstrap -->
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../pages/productos.html">Productos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../pages/servicios.html">Servicios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../pages/faq.html">Preguntas frecuentes</a>
+                    </li>
+                </ul>
+            </div>
         </nav>
     </header>
 
