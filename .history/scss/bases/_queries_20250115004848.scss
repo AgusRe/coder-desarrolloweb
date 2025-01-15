@@ -1,0 +1,201 @@
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.6rem;
+    }
+
+    p, label, input, textarea {
+        font-size: 1rem;
+    }
+
+    .header .logo a img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .header .barra-busqueda {
+        display: 15%;
+    }
+  
+    .header .header-icons img {
+        width: 30px;
+        height: 30px;
+    }
+  
+    .menu ul li a {
+        font-size: 18px;
+    }
+
+    .producto {
+        width: 180px;
+    }
+    
+    .left-button, .right-button {
+        font-size: 1.2em;
+        padding: 8px 12px;
+        width: 60px;
+        height: 60px;
+    }
+
+    .etiquetas {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .etiquetas-item img {
+        max-height: 250px;
+    }
+
+    .etiquetas-item p {
+        font-size: 1.2rem;
+    }
+
+    .main--servicios {
+        padding: 15px;
+    }
+
+    .main--servicios h1 {
+        font-size: 2rem;
+    }
+
+    .main--servicios h3 {
+        font-size: 1.5rem;
+    }
+
+    .main--servicios p {
+        font-size: 1rem; 
+    }
+
+    .main--contacto {
+        padding: 20px;
+    }
+
+    .main--contacto h1 {
+        font-size: 2rem;
+    }
+
+    .main--contacto p {
+        font-size: 1rem;
+    }
+
+    .main--cuenta {
+        flex-direction: column;
+    }
+
+    .menu-lateral {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .producto {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .carrito-total {
+        text-align: center;
+    }
+}
+
+@media (max-width: 576px) {
+    body {
+        font-size: 12px; 
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+    }
+    
+    p, label, input, textarea {
+        font-size: 0.9rem;
+    }
+
+    .left-button, .right-button {
+        width: 50px;
+        height: 50px;
+    }
+
+    .producto {
+        width: 150px;
+    }
+
+    button {
+        font-size: 1rem;
+    }
+
+    .main--servicios {
+        padding: 10px;
+    }
+
+    .main--servicios h1 {
+        font-size: 1.8rem
+    }
+
+    .main--servicios h3 {
+        font-size: 1.3rem;
+    }
+
+    .main--servicios p {
+        font-size: 0.9rem;
+    }
+
+    .main--contacto h1 {
+        font-size: 1.8rem;
+    }
+
+    .main--contacto p {
+        font-size: 0.9rem;
+    }
+
+    .contacto-form button {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .header{
+        .barra-busqueda {
+      display: none;
+    }
+}
+
+    .productos .producto {
+        width: 90%;
+    }
+
+    .etiquetas {
+        grid-template-columns: 1fr;
+    }
+
+    .etiquetas-item img {
+        max-height: 200px;
+    }
+} 
+
+@media (max-width: 350px) {
+    .left-button, .right-button {
+        width: 40px;
+        height: 40px;
+        font-size: 1em;
+    }
+
+    .producto {
+        width: 120px;
+    }
+
+    .productos {
+        padding: 5px;
+        margin: 0 10px;
+    }
+}

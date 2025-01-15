@@ -16,32 +16,6 @@ p {
   font-family: "Funnel Display", sans-serif;
 }
 
-.left-button {
-  font-family: "Funnel Display", sans-serif;
-  background-image: url(../img/boton_islide.png);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-color: transparent;
-  border: none;
-  width: 80px;
-  height: 80px;
-  cursor: pointer;
-  padding: 0;
-}
-
-.right-button {
-  font-family: "Funnel Display", sans-serif;
-  background-image: url(../img/boton_dslide.png);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-color: transparent;
-  border: none;
-  width: 80px;
-  height: 80px;
-  cursor: pointer;
-  padding: 0;
-}
-
 .headmain {
   position: sticky;
   top: 0;
@@ -107,7 +81,7 @@ p {
 
 .menu {
   text-align: center;
-  background-color: #000000;
+  background-color: black;
   border-top: 1px solid rgba(221, 221, 221, 0.6980392157);
   border-bottom: 1px solid rgba(221, 221, 221, 0.6980392157);
   padding: 10px 0;
@@ -163,34 +137,38 @@ main {
 
 .destacados-box {
   display: flex;
+  align-items: center;
   justify-content: center;
-  flex-wrap: wrap;
-  gap: 20px;
+  position: relative;
+  width: 100%;
 }
 
 .productos {
   display: flex;
-  justify-content: flex-start;
   gap: 20px;
-  flex-wrap: nowrap;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding: 10px;
+  justify-content: center;
+  margin: 0 50px;
+  flex-wrap: wrap;
 }
-.productos .producto {
+
+.productos::-webkit-scrollbar {
+  display: none;
+}
+
+.producto {
+  flex: 0 0 auto;
+  width: 220px;
+  max-width: 100%;
   text-align: center;
   border: 1px solid #ddd;
-  padding: 0;
-  width: 220px;
   background-color: #fff;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
-  flex-shrink: 0;
-  min-height: 350px;
-  max-height: 350px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
-.productos .producto a {
+.producto a {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -202,24 +180,52 @@ main {
   color: inherit;
   border-radius: 10px;
 }
-.productos .producto a img {
+.producto a img {
   width: 100%;
   height: auto;
   max-height: 180px;
   object-fit: cover;
   border-radius: 8px;
 }
-.productos .producto a .nombre-prenda {
+.producto a .nombre-prenda {
   font-size: 1em;
   margin: 10px 0;
   font-weight: 500;
   color: #333;
 }
-.productos .producto a .precio-prenda {
+.producto a .precio-prenda {
   font-size: 1.2em;
   color: #000;
   font-weight: bold;
   margin-bottom: 10px;
+}
+
+.left-button {
+  left: 10px;
+  font-family: "Funnel Display", sans-serif;
+  background-image: url(../img/boton_islide.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  border: none;
+  width: 80px;
+  height: 80px;
+  cursor: pointer;
+  padding: 0;
+}
+
+.right-button {
+  right: 10px;
+  font-family: "Funnel Display", sans-serif;
+  background-image: url(../img/boton_dslide.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  border: none;
+  width: 80px;
+  height: 80px;
+  cursor: pointer;
+  padding: 0;
 }
 
 .etiquetas {
@@ -610,7 +616,7 @@ button:focus {
   gap: 20px;
   margin-bottom: 20px;
 }
-.main--carrito .carrito-productos .producto {
+.main--carrito .carrito-productos .producto-carro {
   display: flex;
   align-items: center;
   gap: 20px;
@@ -619,38 +625,38 @@ button:focus {
   border-radius: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
-.main--carrito .carrito-productos .producto img {
+.main--carrito .carrito-productos .producto-carro img {
   width: 100px;
   height: 100px;
   object-fit: cover;
   border-radius: 10px;
 }
-.main--carrito .carrito-productos .producto .info-producto {
+.main--carrito .carrito-productos .producto-carro .info-producto {
   flex: 1;
 }
-.main--carrito .carrito-productos .producto .info-producto h2 {
+.main--carrito .carrito-productos .producto-carro .info-producto h2 {
   margin: 0;
   font-size: 1.2rem;
   color: #333;
 }
-.main--carrito .carrito-productos .producto .info-producto p {
+.main--carrito .carrito-productos .producto-carro .info-producto p {
   margin: 5px 0;
   color: #666;
   font-size: 1rem;
 }
-.main--carrito .carrito-productos .producto .info-producto .cantidad {
+.main--carrito .carrito-productos .producto-carro .info-producto .cantidad {
   display: flex;
   align-items: center;
   gap: 10px;
 }
-.main--carrito .carrito-productos .producto .info-producto .cantidad input {
+.main--carrito .carrito-productos .producto-carro .info-producto .cantidad input {
   width: 50px;
   padding: 5px;
   border: 1px solid #ddd;
   border-radius: 5px;
   text-align: center;
 }
-.main--carrito .carrito-productos .producto .eliminar {
+.main--carrito .carrito-productos .producto-carro .eliminar {
   background-color: #FF6347;
   color: #fff;
   border: none;
@@ -659,7 +665,7 @@ button:focus {
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
-.main--carrito .carrito-productos .producto .eliminar:hover {
+.main--carrito .carrito-productos .producto-carro .eliminar:hover {
   background-color: #e04e3a;
 }
 .main--carrito .carrito-total {
@@ -690,53 +696,57 @@ button:focus {
 
 footer {
   background-color: rgba(204, 203, 203, 0.815);
-  padding: 20px;
+  padding: 20px 10px;
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
-  gap: 20px;
-}
-footer .bloque-superior {
-  display: flex;
-  flex-flow: column;
-  gap: 20px;
-  flex: 1;
-}
-footer .bloque-superior div a {
-  font-size: 1.2em;
-  font-weight: bold;
-  text-decoration: none;
-  color: black;
-}
-footer .metodos {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  flex: 1;
-}
-footer h2 {
-  font-size: 1.5em;
-  margin-bottom: 10px;
-}
-footer img {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
+  align-items: center;
 }
 
-.footer-nav ul {
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 200px;
+  text-align: center;
+}
+.footer-section h2 {
+  font-size: 1.5em;
+  margin-bottom: 15px;
+}
+.footer-section ul {
   list-style-type: none;
   padding: 0;
-  margin: 0;
 }
-.footer-nav ul li {
-  margin: 10px 0;
+.footer-section li {
+  margin: 8px 0;
 }
-.footer-nav ul li a {
+.footer-section a {
   color: black;
   text-decoration: none;
-  font-size: 1.2em;
+  font-size: 1.1em;
   transition: color 0.3s ease;
+}
+.footer-section a:hover {
+  color: #007bff;
+}
+.footer-section img {
+  width: 40px;
+  height: 40px;
+  margin: 5px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.footer-section .payment-methods img, .footer-section .shipping-methods img {
+  width: 50px;
+  height: 50px;
+  margin: 5px;
 }
 
 @media (max-width: 768px) {
@@ -766,15 +776,14 @@ footer img {
   .menu ul li a {
     font-size: 18px;
   }
-  .productos {
-    flex-direction: row;
-    justify-content: center;
-    align-items: stretch;
+  .producto {
+    width: 180px;
   }
-  .productos .producto {
-    width: 100%;
-    max-width: 300px;
-    height: auto;
+  .left-button, .right-button {
+    font-size: 1.2em;
+    padding: 8px 12px;
+    width: 60px;
+    height: 60px;
   }
   .etiquetas {
     grid-template-columns: repeat(2, 1fr);
@@ -835,6 +844,13 @@ footer img {
   p, label, input, textarea {
     font-size: 0.9rem;
   }
+  .left-button, .right-button {
+    width: 50px;
+    height: 50px;
+  }
+  .producto {
+    width: 150px;
+  }
   button {
     font-size: 1rem;
   }
@@ -859,6 +875,9 @@ footer img {
   .contacto-form button {
     font-size: 1rem;
   }
+  .header .barra-busqueda {
+    display: none;
+  }
 }
 @media (max-width: 480px) {
   .header .barra-busqueda {
@@ -872,6 +891,20 @@ footer img {
   }
   .etiquetas-item img {
     max-height: 200px;
+  }
+}
+@media (max-width: 350px) {
+  .left-button, .right-button {
+    width: 40px;
+    height: 40px;
+    font-size: 1em;
+  }
+  .producto {
+    width: 120px;
+  }
+  .productos {
+    padding: 5px;
+    margin: 0 10px;
   }
 }
 

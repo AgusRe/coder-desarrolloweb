@@ -1,0 +1,47 @@
+//* Variables
+
+
+//* Resets
+* {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-family: "Funnel Display", sans-serif;
+}
+
+h2 {
+    font-family: "Funnel Display", sans-serif;
+}
+
+p {
+    font-family: "Funnel Display", sans-serif;
+}
+
+//* Esto es algo "general"? Estaba dentro del index
+.left-button {
+    font-family: "Funnel Display", sans-serif;
+    background-image: url(../img/boton_islide.png);
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-color: transparent;
+    border: none; 
+    width: 80px; 
+    height: 80px; 
+    cursor: pointer;
+    padding: 0;
+}
+
+.right-button {
+    font-family: "Funnel Display", sans-serif;
+    background-image: url(../img/boton_dslide.png);
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-color: transparent;
+    border: none; 
+    width: 80px; 
+    height: 80px; 
+    cursor: pointer;
+    padding: 0;
+}
