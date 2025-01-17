@@ -1,5 +1,16 @@
 //* INDEX ----------------------------------------------------
 
+%flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+%border-shadow {
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
 main {
     padding: 0px;
 }
@@ -12,8 +23,10 @@ main {
 .carousel-item img {
     height: 75vh;
     width: 100%;
-    object-fit: fill;
+    object-fit: fill;   
 }
+
+//* Falta ver mejor el responsive en esto.
 
 .destacados {
     display: flex;
@@ -23,76 +36,77 @@ main {
     padding: 20px;
     background-color: #f9f9f9;
     max-width: 100%;
-}
 
-.destacados-box {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    width: 100%;
-}
-
-.productos {
-    display: flex;
-    gap: 20px;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    padding: 10px;
-    justify-content: center;
-    margin: 0 50px;
-    flex-wrap: wrap;
-}
-
-.productos::-webkit-scrollbar {
-    display: none;
-}
-
-.producto {
-    flex: 0 0 auto;
-    width: 220px;
-    max-width: 100%;
-    text-align: center;
-    border: 1px solid #ddd;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-
-    a {
+    .destacados-box {
         display: flex;
-        flex-direction: column;
-        justify-content: space-between;
         align-items: center;
-        width: 100%; 
-        height: 100%; 
-        padding: 20px; 
-        text-decoration: none;
-        color: inherit;
-        border-radius: 10px;
+        justify-content: center;
+        position: relative;
+        width: 100%;
+    }
 
-        img {
-            width: 100%;
-            height: auto;
-            max-height: 180px;
-            object-fit: cover;
-            border-radius: 8px;
-        }
+    .productos {
+        display: flex;
+        gap: 20px;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        padding: 10px;
+        justify-content: center;
+        margin: 0 50px;
+        flex-wrap: wrap;
 
-        .nombre-prenda {
-            font-size: 1em;
-            margin: 10px 0;
-            font-weight: 500;
-            color: #333;
-        }
-
-        .precio-prenda {
-            font-size: 1.2em;
-            color: #000;
-            font-weight: bold;
-            margin-bottom: 10px;
+        .producto {
+            @extend %border-shadow;
+            padding: 1rem;
+            text-align: center;
+            transition: transform 0.3s;
+        
+            &:hover {
+              transform: scale(1.05);
+            }
+        
+            a {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+                width: 100%; 
+                height: 100%; 
+                padding: 20px; 
+                text-decoration: none;
+                color: inherit;
+                border-radius: 10px;
+        
+                img {
+                    width: 100%;
+                    height: auto;
+                    max-height: 180px;
+                    object-fit: cover;
+                    border-radius: 8px;
+                }
+        
+                .nombre-prenda {
+                    font-size: 1em;
+                    margin: 10px 0;
+                    font-weight: 500;
+                    color: #333;
+                }
+        
+                .precio-prenda {
+                    font-size: 1.2em;
+                    color: #000;
+                    font-weight: bold;
+                    margin-bottom: 10px;
+                }
+            }
         }
     }
+    
+    .productos::-webkit-scrollbar {
+        display: none;
+    }
 }
+
 
 @mixin button-slide($background-image) {
     font-family: "Funnel Display", sans-serif;

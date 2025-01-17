@@ -101,6 +101,11 @@ p {
   color: white;
 }
 
+.destacados .productos .producto {
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
 main {
   padding: 0px;
 }
@@ -125,16 +130,14 @@ main {
   background-color: #f9f9f9;
   max-width: 100%;
 }
-
-.destacados-box {
+.destacados .destacados-box {
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
   width: 100%;
 }
-
-.productos {
+.destacados .productos {
   display: flex;
   gap: 20px;
   overflow-x: auto;
@@ -144,22 +147,15 @@ main {
   margin: 0 50px;
   flex-wrap: wrap;
 }
-
-.productos::-webkit-scrollbar {
-  display: none;
-}
-
-.producto {
-  flex: 0 0 auto;
-  width: 220px;
-  max-width: 100%;
+.destacados .productos .producto {
+  padding: 1rem;
   text-align: center;
-  border: 1px solid #ddd;
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
 }
-.producto a {
+.destacados .productos .producto:hover {
+  transform: scale(1.05);
+}
+.destacados .productos .producto a {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -171,24 +167,27 @@ main {
   color: inherit;
   border-radius: 10px;
 }
-.producto a img {
+.destacados .productos .producto a img {
   width: 100%;
   height: auto;
   max-height: 180px;
   object-fit: cover;
   border-radius: 8px;
 }
-.producto a .nombre-prenda {
+.destacados .productos .producto a .nombre-prenda {
   font-size: 1em;
   margin: 10px 0;
   font-weight: 500;
   color: #333;
 }
-.producto a .precio-prenda {
+.destacados .productos .producto a .precio-prenda {
   font-size: 1.2em;
   color: #000;
   font-weight: bold;
   margin-bottom: 10px;
+}
+.destacados .productos::-webkit-scrollbar {
+  display: none;
 }
 
 .left-button {
