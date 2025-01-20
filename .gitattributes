@@ -1,0 +1,8 @@
+# Normalizar finales de línea a LF para todos los archivos de texto
+* text=auto
+
+# Los archivos SVG van a usar LF
+*.svg text eol=lf
+
+# Asegurarse de que el archivo manifest use LF
+*.webmanifest text eol=lf
