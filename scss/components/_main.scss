@@ -214,10 +214,11 @@ button:focus {
 
 //* FAQ ----------------------------------------------------
 //* Acá hay pequeño error en la imágen de fondo, al abrirse una de las preguntas se hace más grande la página por lo que se hace como una especie de zoom en el fondo. 
+/*
 .header--menu {
-    /* Debería de esconderse cuando se scrollea pero no pude conseguir hacerlo */
+    //* Debería de esconderse cuando se scrollea pero no pude conseguir hacerlo
 }
-
+*/
 .main--faq {
     background-image: url(../img/faq-background.png);
     background-size: cover;
@@ -680,7 +681,8 @@ button:focus {
 
 
 //* productos.html main ----------------------------------------------------
-
+/*
 .main--productosgrid {
     
 }
+*/

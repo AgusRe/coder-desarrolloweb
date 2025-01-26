@@ -293,10 +293,11 @@ button:focus {
   box-shadow: none;
 }
 
+/*
 .header--menu {
-  /* Debería de esconderse cuando se scrollea pero no pude conseguir hacerlo */
+    //* Debería de esconderse cuando se scrollea pero no pude conseguir hacerlo
 }
-
+*/
 .main--faq {
   background-image: url(../img/faq-background.png);
   background-size: cover;
@@ -693,6 +694,11 @@ details[open] .main--faq details p {
   background-color: #0056b3;
 }
 
+/*
+.main--productosgrid {
+
+}
+*/
 footer {
   background-color: rgba(204, 203, 203, 0.815);
   padding: 20px 10px;
