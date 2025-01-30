@@ -1,4 +1,119 @@
-@media (max-width: 768px) {
+// Media Queries para pantallas pequeñas (móviles)
+@media (max-width: 576px) {
+    body {
+        font-size: 12px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+    }
+
+    p, label, input, textarea {
+        font-size: 0.9rem;
+    }
+
+    .header {
+        .logo a img {
+            width: 70px;
+        }
+
+        .barra-busqueda {
+            display: none;
+        }
+
+        .header-icons {
+            img {
+                width: 30px;
+                height: 30px;
+                margin: 0 5px;
+            }
+        }
+    }
+
+    .destacados .productos .producto {
+        width: 100%;
+    }
+
+    .etiquetas {
+        grid-template-columns: 1fr;
+    }
+
+    .etiquetas-item img {
+        max-height: 200px;
+    }
+
+    .left-button, .right-button {
+        width: 50px;
+        height: 50px;
+    }
+
+    .main--servicios {
+        padding: 10px;
+
+        h1 {
+            font-size: 1.8rem;
+        }
+
+        h3 {
+            font-size: 1.3rem;
+        }
+
+        p {
+            font-size: 0.9rem;
+        }
+    }
+
+    .main--contacto {
+        padding: 20px;
+
+        h1 {
+            font-size: 1.8rem;
+        }
+
+        p {
+            font-size: 0.9rem;
+        }
+
+        .contacto-form button {
+            font-size: 1rem;
+        }
+    }
+
+    .main--cuenta {
+        flex-direction: column;
+
+        .menu-lateral {
+            width: 100%;
+            border-right: none;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .producto {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+
+    .carrito-total {
+        text-align: center;
+    }
+
+    footer .footer-container {
+        flex-direction: column;
+        gap: 20px;
+
+        .footer-section {
+            min-width: 100%;
+        }
+    }
+}
+
+// Media Queries para pantallas medianas (tablets)
+@media (min-width: 577px) and (max-width: 768px) {
     body {
         font-size: 14px;
     }
@@ -15,206 +130,86 @@
         font-size: 1rem;
     }
 
-    .header .logo a img {
-        width: 80px;
-        height: 80px;
-    }
-
-    .header .barra-busqueda {
-        display: 15%;
-    }
-  
-    .header .header-icons img {
-        width: 30px;
-        height: 30px;
-    }
-  
-    .menu ul li a {
-        font-size: 18px;
-    }
-
-    .producto {
-        width: 180px;
-    }
-    
-    .left-button, .right-button {
-        font-size: 1.2em;
-        padding: 8px 12px;
-        width: 60px;
-        height: 60px;
-    }
-
-    .etiquetas {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .etiquetas-item img {
-        max-height: 250px;
-    }
-
-    .etiquetas-item p {
-        font-size: 1.2rem;
-    }
-
-    .main--servicios {
-        padding: 15px;
-    }
-
-    .main--servicios h1 {
-        font-size: 2rem;
-    }
-
-    .main--servicios h3 {
-        font-size: 1.5rem;
-    }
-
-    .main--servicios p {
-        font-size: 1rem; 
-    }
-
-    .main--contacto {
-        padding: 20px;
-    }
-
-    .main--contacto h1 {
-        font-size: 2rem;
-    }
-
-    .main--contacto p {
-        font-size: 1rem;
-    }
-
-    .main--cuenta {
-        flex-direction: column;
-    }
-
-    .menu-lateral {
-        width: 100%;
-        border-right: none;
-        border-bottom: 1px solid #ddd;
-    }
-
-    .producto {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .carrito-total {
-        text-align: center;
-    }
-}
-
-@media (min-width: 576px) and (max-width: 768px) {
     .header {
         .barra-busqueda {
             margin: 5px 0;
+
             input {
                 width: 70%;
             }
         }
 
         .header-icons img {
-            width: 30px; 
+            width: 30px;
             height: 30px;
         }
     }
-}
 
-@media (max-width: 576px) {
-    body {
-        font-size: 12px; 
-    }
-
-    h1 {
-        font-size: 1.8rem;
-    }
-
-    h2 {
-        font-size: 1.4rem;
-    }
-    
-    p, label, input, textarea {
-        font-size: 0.9rem;
-    }
-
-    .left-button, .right-button {
-        width: 50px;
-        height: 50px;
-    }
-
-    .producto {
-        width: 150px;
-    }
-
-    button {
-        font-size: 1rem;
-    }
-
-    .main--servicios {
-        padding: 10px;
-    }
-
-    .main--servicios h1 {
-        font-size: 1.8rem
-    }
-
-    .main--servicios h3 {
-        font-size: 1.3rem;
-    }
-
-    .main--servicios p {
-        font-size: 0.9rem;
-    }
-
-    .main--contacto h1 {
-        font-size: 1.8rem;
-    }
-
-    .main--contacto p {
-        font-size: 0.9rem;
-    }
-
-    .contacto-form button {
-        font-size: 1rem;
-    }
-
-    .header {
-        align-items: center;
-
-        .logo a img {
-            width: 70px;
-        }
-        //* No conseguí hacer que quede únicamente la lupa por lo que dejo display none de momento. Vi que se puede lograr con javascript pero de momento no nos enseñaron eso.
-        .barra-busqueda {
-            display: none;
-        }
-
-        .header-icons {
-            display: flex;
-            justify-content: center;
-            img {
-                width: 30px;
-                height: 30px;
-                margin: 0 5px;
-            }
-        }
-    }
-}
-
-@media (max-width: 480px) {
-    .productos .producto {
-        width: 90%;
+    .destacados .productos .producto {
+        width: 48%;
     }
 
     .etiquetas {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
     }
 
-    .etiquetas-item img {
-        max-height: 200px;
+    .left-button, .right-button {
+        width: 60px;
+        height: 60px;
     }
-} 
 
+    .main--servicios {
+        padding: 15px;
+
+        h1 {
+            font-size: 2rem;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+        }
+
+        p {
+            font-size: 1rem;
+        }
+    }
+
+    .main--contacto {
+        padding: 20px;
+
+        h1 {
+            font-size: 2rem;
+        }
+
+        p {
+            font-size: 1rem;
+        }
+    }
+}
+
+// Media Queries para pantallas grandes (desktop)
+@media (min-width: 1052px) {
+    .header {
+        .barra-busqueda {
+            flex: 1;
+        }
+    }
+
+    .destacados .productos .producto {
+        width: 23%;
+    }
+
+    .etiquetas {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .left-button, .right-button {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+// Media Queries para pantallas muy pequeñas (menos de 350px)
 @media (max-width: 350px) {
     .left-button, .right-button {
         width: 40px;

@@ -148,7 +148,7 @@ main {
   flex-wrap: wrap;
 }
 .destacados .productos .producto {
-  padding: 1rem;
+  padding: 0;
   text-align: center;
   transition: transform 0.3s;
 }
@@ -162,7 +162,7 @@ main {
   align-items: center;
   width: 100%;
   height: 100%;
-  padding: 20px;
+  padding: 0px;
   text-decoration: none;
   color: inherit;
   border-radius: 10px;
@@ -389,9 +389,9 @@ details[open] .main--faq details p {
   text-align: left;
   color: #555;
 }
-.main--faq .form-preguntas input, .main--faq .form-preguntas .form-preguntas textarea {
+.main--faq .form-preguntas input, .main--faq .form-preguntas textarea {
   width: 100%;
-  padding: 10px;
+  padding: 1 0px;
   border: 1px solid #ddd;
   border-radius: 5px;
   font-size: 1rem;
@@ -706,8 +706,7 @@ footer {
   justify-content: center;
   align-items: center;
 }
-
-.footer-container {
+footer .footer-container {
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
@@ -715,46 +714,129 @@ footer {
   width: 100%;
   max-width: 1200px;
 }
-
-.footer-section {
+footer .footer-container .footer-section {
   flex: 1;
   min-width: 200px;
   text-align: center;
 }
-.footer-section h2 {
+footer .footer-container .footer-section h2 {
   font-size: 1.5em;
   margin-bottom: 15px;
 }
-.footer-section ul {
+footer .footer-container .footer-section ul {
   list-style-type: none;
   padding: 0;
 }
-.footer-section li {
+footer .footer-container .footer-section ul li {
   margin: 8px 0;
 }
-.footer-section a {
+footer .footer-container .footer-section ul a {
   color: black;
   text-decoration: none;
   font-size: 1.1em;
   transition: color 0.3s ease;
 }
-.footer-section a:hover {
+footer .footer-container .footer-section ul a:hover {
   color: #007bff;
 }
-.footer-section img {
+footer .footer-container .footer-section img {
   width: 40px;
   height: 40px;
   margin: 5px;
   border-radius: 50%;
   object-fit: cover;
 }
-.footer-section .payment-methods img, .footer-section .shipping-methods img {
+footer .footer-container .footer-section .payment-methods img, footer .footer-container .footer-section .shipping-methods img {
   width: 50px;
   height: 50px;
   margin: 5px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 576px) {
+  body {
+    font-size: 12px;
+  }
+  h1 {
+    font-size: 1.8rem;
+  }
+  h2 {
+    font-size: 1.4rem;
+  }
+  p, label, input, textarea {
+    font-size: 0.9rem;
+  }
+  .header .logo a img {
+    width: 70px;
+  }
+  .header .barra-busqueda {
+    display: none;
+  }
+  .header .header-icons img {
+    width: 30px;
+    height: 30px;
+    margin: 0 5px;
+  }
+  .destacados .productos .producto {
+    width: 100%;
+  }
+  .etiquetas {
+    grid-template-columns: 1fr;
+  }
+  .etiquetas-item img {
+    max-height: 200px;
+  }
+  .left-button, .right-button {
+    width: 50px;
+    height: 50px;
+  }
+  .main--servicios {
+    padding: 10px;
+  }
+  .main--servicios h1 {
+    font-size: 1.8rem;
+  }
+  .main--servicios h3 {
+    font-size: 1.3rem;
+  }
+  .main--servicios p {
+    font-size: 0.9rem;
+  }
+  .main--contacto {
+    padding: 20px;
+  }
+  .main--contacto h1 {
+    font-size: 1.8rem;
+  }
+  .main--contacto p {
+    font-size: 0.9rem;
+  }
+  .main--contacto .contacto-form button {
+    font-size: 1rem;
+  }
+  .main--cuenta {
+    flex-direction: column;
+  }
+  .main--cuenta .menu-lateral {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid #ddd;
+  }
+  .main--cuenta .producto {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .carrito-total {
+    text-align: center;
+  }
+  footer .footer-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+  footer .footer-container .footer-section {
+    min-width: 100%;
+  }
+}
+@media (min-width: 577px) and (max-width: 768px) {
   body {
     font-size: 14px;
   }
@@ -767,37 +849,25 @@ footer {
   p, label, input, textarea {
     font-size: 1rem;
   }
-  .header .logo a img {
-    width: 80px;
-    height: 80px;
-  }
   .header .barra-busqueda {
-    display: 15%;
+    margin: 5px 0;
+  }
+  .header .barra-busqueda input {
+    width: 70%;
   }
   .header .header-icons img {
     width: 30px;
     height: 30px;
   }
-  .menu ul li a {
-    font-size: 18px;
-  }
-  .producto {
-    width: 180px;
-  }
-  .left-button, .right-button {
-    font-size: 1.2em;
-    padding: 8px 12px;
-    width: 60px;
-    height: 60px;
+  .destacados .productos .producto {
+    width: 48%;
   }
   .etiquetas {
     grid-template-columns: repeat(2, 1fr);
   }
-  .etiquetas-item img {
-    max-height: 250px;
-  }
-  .etiquetas-item p {
-    font-size: 1.2rem;
+  .left-button, .right-button {
+    width: 60px;
+    height: 60px;
   }
   .main--servicios {
     padding: 15px;
@@ -820,106 +890,20 @@ footer {
   .main--contacto p {
     font-size: 1rem;
   }
-  .main--cuenta {
-    flex-direction: column;
-  }
-  .menu-lateral {
-    width: 100%;
-    border-right: none;
-    border-bottom: 1px solid #ddd;
-  }
-  .producto {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  .carrito-total {
-    text-align: center;
-  }
 }
-@media (min-width: 576px) and (max-width: 768px) {
+@media (min-width: 1052px) {
   .header .barra-busqueda {
-    margin: 5px 0;
+    flex: 1;
   }
-  .header .barra-busqueda input {
-    width: 70%;
-  }
-  .header .header-icons img {
-    width: 30px;
-    height: 30px;
-  }
-}
-@media (max-width: 576px) {
-  body {
-    font-size: 12px;
-  }
-  h1 {
-    font-size: 1.8rem;
-  }
-  h2 {
-    font-size: 1.4rem;
-  }
-  p, label, input, textarea {
-    font-size: 0.9rem;
-  }
-  .left-button, .right-button {
-    width: 50px;
-    height: 50px;
-  }
-  .producto {
-    width: 150px;
-  }
-  button {
-    font-size: 1rem;
-  }
-  .main--servicios {
-    padding: 10px;
-  }
-  .main--servicios h1 {
-    font-size: 1.8rem;
-  }
-  .main--servicios h3 {
-    font-size: 1.3rem;
-  }
-  .main--servicios p {
-    font-size: 0.9rem;
-  }
-  .main--contacto h1 {
-    font-size: 1.8rem;
-  }
-  .main--contacto p {
-    font-size: 0.9rem;
-  }
-  .contacto-form button {
-    font-size: 1rem;
-  }
-  .header {
-    align-items: center;
-  }
-  .header .logo a img {
-    width: 70px;
-  }
-  .header .barra-busqueda {
-    display: none;
-  }
-  .header .header-icons {
-    display: flex;
-    justify-content: center;
-  }
-  .header .header-icons img {
-    width: 30px;
-    height: 30px;
-    margin: 0 5px;
-  }
-}
-@media (max-width: 480px) {
-  .productos .producto {
-    width: 90%;
+  .destacados .productos .producto {
+    width: 23%;
   }
   .etiquetas {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(3, 1fr);
   }
-  .etiquetas-item img {
-    max-height: 200px;
+  .left-button, .right-button {
+    width: 80px;
+    height: 80px;
   }
 }
 @media (max-width: 350px) {
