@@ -1,171 +1,82 @@
-// Media Queries para pantallas pequeñas (móviles)
-@media (max-width: 576px) {
-    body {
-        font-size: 12px;
-    }
-
-    h1 {
-        font-size: 1.8rem;
-    }
-
-    h2 {
-        font-size: 1.4rem;
-    }
-
-    p, label, input, textarea {
-        font-size: 0.9rem;
-    }
-
+// Media Queries para pantallas grandes (desktop)
+@media (min-width: 768px) {
     .header {
-        .logo a img {
-            width: 70px;
-        }
-
         .barra-busqueda {
-            display: none;
-        }
-
-        .header-icons {
-            img {
-                width: 30px;
-                height: 30px;
-                margin: 0 5px;
-            }
+            flex: 1;
         }
     }
 
     .main--index {
-        .destacados .destacados-box{
-            .left-button, .right-button {
-                width: 50px;
-                height: 50px;
-            }
-
-            .productos .producto {
-                width: 100%;
-            }
+        .destacados .productos .producto {
+            width: 23%;
         }
 
         .etiquetas {
-            grid-template-columns: 1fr;
-
-            .etiquetas-item img {
-                max-height: 200px;
-            }
+            grid-template-columns: repeat(3, 1fr);
         }
 
-        
-    }
-
-    .main--servicios {
-        padding: 10px;
-
-        h1 {
-            font-size: 1.8rem;
-        }
-
-        h3 {
-            font-size: 1.3rem;
-        }
-
-        p {
-            font-size: 0.9rem;
-        }
-    }
-
-    .main--contacto {
-        padding: 20px;
-
-        h1 {
-            font-size: 1.8rem;
-        }
-
-        p {
-            font-size: 0.9rem;
-        }
-
-        .contacto-form button {
-            font-size: 1rem;
-        }
-    }
-
-    .main--cuenta {
-        flex-direction: column;
-
-        .menu-lateral {
-            width: 100%;
-            border-right: none;
-            border-bottom: 1px solid #ddd;
-        }
-
-        .producto {
-            flex-direction: column;
-            align-items: flex-start;
-        }
-    }
-
-    .main--carrito {
-        .carrito-productos .producto-carro {
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-
-            img {
-                width: 80px;
-                height: 80px;
-            }
-
-            .eliminar {
-                width: 100%;
-                margin-top: 10px;
-            }
-        }
-
-        .carrito-total {
-            text-align: center;
-        }
-    }
-
-    .main--contacto {
-        padding: 10px;
-
-        h1 {
-            font-size: 2rem;
-        }
-
-        p {
-            font-size: 1rem;
+        .left-button, .right-button {
+            width: 80px;
+            height: 80px;
         }
     }
 
     .main--faq {
-        padding: 20px 10px;
+        padding: 30px 15px;
 
         h1 {
-            font-size: 1.8rem;
+            font-size: 2.5rem;
         }
 
         details {
             summary {
-                font-size: 1.4rem;
+                font-size: 1.8rem;
             }
 
             p {
-                font-size: 0.8rem;
+                font-size: 1rem;
             }
         }
 
-        p {
-            font-size: 1rem;
+        .faq--mail {
+            padding: 30px;
+
+            h3 {
+                font-size: 2rem;
+            }
+
+            .form-preguntas {
+                gap: 20px;
+
+                input,
+                textarea {
+                    font-size: 1.1rem;
+                }
+
+                button {
+                    font-size: 1.2rem;
+                }
+            }
         }
     }
 
-    footer .footer-container {
-        flex-direction: column;
-        gap: 20px;
+    .main--contacto {
+        padding: 30px 15px;
 
-        .footer-section {
-            min-width: 100%;
+        .contacto-container {
+            padding: 20px;
+
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            p {
+                font-size: 1.2rem;
+            }
+
+            .contacto-form button {
+                font-size: 1.2rem;
+            }
         }
     }
 }
@@ -237,14 +148,22 @@
     }
 
     .main--contacto {
-        padding: 15px;
+        padding: 15px 10px;
 
-        h1 {
-            font-size: 2rem;
-        }
+        .contacto-container {
+            padding: 30px;
 
-        p {
-            font-size: 1rem;
+            h1 {
+                font-size: 2rem;
+            }
+
+            p {
+                font-size: 1rem;
+            }
+
+            .contacto-form button {
+                font-size: 1.1rem;
+            }
         }
     }
 
@@ -264,46 +183,290 @@
                 font-size: 0.9rem;
             }
         }
+
+        .faq--mail {
+            padding: 25px;
+
+            h3 {
+                font-size: 1.8rem;
+            }
+
+            .form-preguntas {
+                gap: 18px;
+
+                input,
+                textarea {
+                    font-size: 1rem;
+                }
+
+                button {
+                    font-size: 1.1rem;
+                }
+            }
+        }
+    }
+
+    footer {
+        padding: 25px 15px;
+
+        .footer-container {
+            gap: 35px;
+
+            .footer-section {
+                h2 {
+                    font-size: 1.8em;
+                }
+
+                ul li {
+                    margin: 9px 0;
+                }
+
+                a {
+                    font-size: 1.15em;
+                }
+
+                img {
+                    width: 45px;
+                    height: 45px;
+                }
+
+                .payment-methods img, .shipping-methods img {
+                    width: 55px;
+                    height: 55px;
+                }
+            }
+        }
     }
 }
 
-// Media Queries para pantallas grandes (desktop)
-@media (min-width: 768px) {
+// Media Queries para pantallas pequeñas (móviles)
+@media (max-width: 576px) {
+    body {
+        font-size: 12px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+    }
+
+    p, label, input, textarea {
+        font-size: 0.9rem;
+    }
+
     .header {
+        .logo a img {
+            width: 70px;
+        }
+
         .barra-busqueda {
-            flex: 1;
+            display: none;
+        }
+
+        .header-icons {
+            img {
+                width: 30px;
+                height: 30px;
+                margin: 0 5px;
+            }
         }
     }
 
     .main--index {
-        .destacados .productos .producto {
-            width: 23%;
+        .destacados .destacados-box{
+            .left-button, .right-button {
+                width: 50px;
+                height: 50px;
+            }
+
+            .productos .producto {
+                width: 100%;
+            }
         }
 
         .etiquetas {
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: 1fr;
+
+            .etiquetas-item img {
+                max-height: 200px;
+                aspect-ratio: 1 / 1;
+            }
         }
 
-        .left-button, .right-button {
-            width: 80px;
-            height: 80px;
+        
+    }
+
+    .main--servicios {
+        padding: 10px;
+
+        h1 {
+            font-size: 1.8rem;
+        }
+
+        h3 {
+            font-size: 1.3rem;
+        }
+
+        p {
+            font-size: 0.9rem;
         }
     }
 
-    .main--faq {
-        padding: 30px 15px;
+    .main--contacto {
+        padding: 20px;
 
-        h1 {
-            font-size: 2.5rem;
-        }
+        div {
+            padding: 20px;
 
-        details {
-            summary {
+            h1 {
                 font-size: 1.8rem;
             }
 
             p {
+                font-size: 0.9rem;
+            }
+
+            .contacto-form button {
                 font-size: 1rem;
+            }
+        }
+    }
+
+    .main--cuenta {
+        flex-direction: column;
+
+        .menu-lateral {
+            width: 100%;
+            border-right: none;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .producto {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+
+    .main--carrito {
+        .carrito-productos .producto-carro {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+
+            img {
+                width: 80px;
+                height: 80px;
+            }
+
+            .eliminar {
+                width: 100%;
+                margin-top: 10px;
+            }
+        }
+
+        .carrito-total {
+            text-align: center;
+        }
+    }
+
+    .main--contacto {
+        padding: 20px 10px;
+
+        .contacto-container {
+            padding: 20px;
+
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            p {
+                font-size: 0.9rem;
+            }
+
+            .contacto-form button {
+                font-size: 1rem;
+            }
+        }
+    }
+
+    .main--faq {
+        padding: 20px 10px;
+
+        h1 {
+            font-size: 1.8rem;
+        }
+
+        details {
+            summary {
+                font-size: 1.4rem;
+            }
+
+            p {
+                font-size: 0.8rem;
+            }
+        }
+
+        p {
+            font-size: 1rem;
+        }
+
+        .faq--mail {
+            padding: 20px;
+
+            h3 {
+                font-size: 1.5rem;
+            }
+
+            .form-preguntas {
+                gap: 15px;
+
+                input,
+                textarea {
+                    font-size: 0.9rem;
+                }
+
+                button {
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+
+    footer {
+        padding: 20px 10px;
+
+        .footer-container {
+            flex-direction: column;
+            gap: 20px;
+
+            .footer-section {
+                min-width: 100%;
+                text-align: center;
+
+                h2 {
+                    font-size: 1.6em;
+                }
+
+                ul li {
+                    margin: 8px 0;
+                }
+
+                a {
+                    font-size: 1em;
+                }
+
+                img {
+                    width: 40px;
+                    height: 40px;
+                }
+
+                .payment-methods img, .shipping-methods img {
+                    width: 50px;
+                    height: 50px;
+                }
             }
         }
     }
@@ -325,6 +488,14 @@
                 .producto {
                     width: 120px;
                 }
+            }
+        }
+        
+        .etiquetas {
+            grid-template-columns: 1fr;
+
+            .etiquetas-item img {
+                max-height: 150px;
             }
         }
     }
@@ -350,6 +521,81 @@
 
             p {
                 font-size: 0.8rem;
+            }
+        }
+
+        .faq--mail {
+            padding: 15px;
+
+            h3 {
+                font-size: 1.3rem;
+            }
+
+            .form-preguntas {
+                gap: 10px;
+
+                input,
+                textarea {
+                    font-size: 0.8rem;
+                    padding: 8px;
+                }
+
+                button {
+                    font-size: 0.9rem;
+                    padding: 8px 10px;
+                }
+            }
+        }
+    }
+
+    .main--contacto {
+        padding: 10px;
+
+        .contacto-container {
+            padding: 15px;
+
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            p {
+                font-size: 0.8rem;
+            }
+
+            .contacto-form button {
+                font-size: 0.9rem;
+            }
+        }
+    }
+
+    footer {
+        padding: 15px 5px;
+
+        .footer-container {
+            gap: 15px;
+
+            .footer-section {
+                h2 {
+                    font-size: 1.4em;
+                }
+
+                ul li {
+                    margin: 6px 0;
+                }
+
+                a {
+                    font-size: 0.9em;
+                }
+
+                img {
+                    width: 35px;
+                    height: 35px;
+                }
+
+                .payment-methods img, .shipping-methods img {
+                    width: 40px;
+                    height: 40px;
+                }
             }
         }
     }

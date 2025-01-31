@@ -227,15 +227,22 @@ main {
   background-color: #666060;
   cursor: pointer;
 }
-.main--index .etiquetas .etiquetas-item img {
+.main--index .etiquetas .etiquetas-item a {
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.main--index .etiquetas .etiquetas-item a img {
   width: 100%;
   height: auto;
   max-height: 500px;
   object-fit: cover;
   border-radius: 15px;
   display: block;
+  aspect-ratio: 1/1;
 }
-.main--index .etiquetas .etiquetas-item p {
+.main--index .etiquetas .etiquetas-item a p {
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -282,11 +289,6 @@ main {
   box-shadow: none;
 }
 
-/*
-.header--menu {
-    //* Debería de esconderse cuando se scrollea pero no pude conseguir hacerlo
-}
-*/
 .main--faq {
   background: rgb(84, 189, 135);
   background: linear-gradient(90deg, rgb(84, 189, 135) 0%, rgba(81, 99, 148, 0.9416141457) 50%, rgb(135, 79, 172) 100%);
@@ -444,9 +446,8 @@ details[open] .main--faq details p {
 
 .main--contacto {
   background: rgb(84, 189, 135);
-  background: linear-gradient(90deg, rgb(84, 189, 135) 0%, rgba(81, 99, 148, 0.9416141457) 50%, rgb(135, 79, 172) 100%);
-  padding-bottom: 50px;
-  padding-top: 50px;
+  background: linear-gradient(90deg, rgb(84, 189, 135) 0%, rgba(81, 99, 148, 0.94) 50%, rgb(135, 79, 172) 100%);
+  padding: 50px 0;
 }
 .main--contacto div {
   max-width: 800px;
@@ -753,125 +754,62 @@ footer .footer-container .footer-section .payment-methods img, footer .footer-co
   margin: 5px;
 }
 
-@media (max-width: 576px) {
-  body {
-    font-size: 12px;
-  }
-  h1 {
-    font-size: 1.8rem;
-  }
-  h2 {
-    font-size: 1.4rem;
-  }
-  p, label, input, textarea {
-    font-size: 0.9rem;
-  }
-  .header .logo a img {
-    width: 70px;
-  }
+@media (min-width: 768px) {
   .header .barra-busqueda {
-    display: none;
+    flex: 1;
   }
-  .header .header-icons img {
-    width: 30px;
-    height: 30px;
-    margin: 0 5px;
-  }
-  .main--index .destacados .destacados-box .left-button, .main--index .destacados .destacados-box .right-button {
-    width: 50px;
-    height: 50px;
-  }
-  .main--index .destacados .destacados-box .productos .producto {
-    width: 100%;
+  .main--index .destacados .productos .producto {
+    width: 23%;
   }
   .main--index .etiquetas {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(3, 1fr);
   }
-  .main--index .etiquetas .etiquetas-item img {
-    max-height: 200px;
-  }
-  .main--servicios {
-    padding: 10px;
-  }
-  .main--servicios h1 {
-    font-size: 1.8rem;
-  }
-  .main--servicios h3 {
-    font-size: 1.3rem;
-  }
-  .main--servicios p {
-    font-size: 0.9rem;
-  }
-  .main--contacto {
-    padding: 20px;
-  }
-  .main--contacto h1 {
-    font-size: 1.8rem;
-  }
-  .main--contacto p {
-    font-size: 0.9rem;
-  }
-  .main--contacto .contacto-form button {
-    font-size: 1rem;
-  }
-  .main--cuenta {
-    flex-direction: column;
-  }
-  .main--cuenta .menu-lateral {
-    width: 100%;
-    border-right: none;
-    border-bottom: 1px solid #ddd;
-  }
-  .main--cuenta .producto {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  .main--carrito .carrito-productos .producto-carro {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-  .main--carrito .carrito-productos .producto-carro img {
+  .main--index .left-button, .main--index .right-button {
     width: 80px;
     height: 80px;
   }
-  .main--carrito .carrito-productos .producto-carro .eliminar {
-    width: 100%;
-    margin-top: 10px;
-  }
-  .main--carrito .carrito-total {
-    text-align: center;
-  }
-  .main--contacto {
-    padding: 10px;
-  }
-  .main--contacto h1 {
-    font-size: 2rem;
-  }
-  .main--contacto p {
-    font-size: 1rem;
-  }
   .main--faq {
-    padding: 20px 10px;
+    padding: 30px 15px;
   }
   .main--faq h1 {
-    font-size: 1.8rem;
+    font-size: 2.5rem;
   }
   .main--faq details summary {
-    font-size: 1.4rem;
+    font-size: 1.8rem;
   }
   .main--faq details p {
-    font-size: 0.8rem;
-  }
-  .main--faq p {
     font-size: 1rem;
   }
-  footer .footer-container {
-    flex-direction: column;
+  .main--faq .faq--mail {
+    padding: 30px;
+  }
+  .main--faq .faq--mail h3 {
+    font-size: 2rem;
+  }
+  .main--faq .faq--mail .form-preguntas {
     gap: 20px;
   }
-  footer .footer-container .footer-section {
-    min-width: 100%;
+  .main--faq .faq--mail .form-preguntas input,
+  .main--faq .faq--mail .form-preguntas textarea {
+    font-size: 1.1rem;
+  }
+  .main--faq .faq--mail .form-preguntas button {
+    font-size: 1.2rem;
+  }
+  .main--contacto {
+    padding: 30px 15px;
+  }
+  .main--contacto .contacto-container {
+    padding: 20px;
+  }
+  .main--contacto .contacto-container h1 {
+    font-size: 2.5rem;
+  }
+  .main--contacto .contacto-container p {
+    font-size: 1.2rem;
+  }
+  .main--contacto .contacto-container .contacto-form button {
+    font-size: 1.2rem;
   }
 }
 @media (min-width: 577px) and (max-width: 768px) {
@@ -920,13 +858,19 @@ footer .footer-container .footer-section .payment-methods img, footer .footer-co
     font-size: 1rem;
   }
   .main--contacto {
-    padding: 15px;
+    padding: 15px 10px;
   }
-  .main--contacto h1 {
+  .main--contacto .contacto-container {
+    padding: 30px;
+  }
+  .main--contacto .contacto-container h1 {
     font-size: 2rem;
   }
-  .main--contacto p {
+  .main--contacto .contacto-container p {
     font-size: 1rem;
+  }
+  .main--contacto .contacto-container .contacto-form button {
+    font-size: 1.1rem;
   }
   .main--faq {
     padding: 25px 15px;
@@ -940,32 +884,212 @@ footer .footer-container .footer-section .payment-methods img, footer .footer-co
   .main--faq details p {
     font-size: 0.9rem;
   }
-}
-@media (min-width: 768px) {
-  .header .barra-busqueda {
-    flex: 1;
+  .main--faq .faq--mail {
+    padding: 25px;
   }
-  .main--index .destacados .productos .producto {
-    width: 23%;
+  .main--faq .faq--mail h3 {
+    font-size: 1.8rem;
+  }
+  .main--faq .faq--mail .form-preguntas {
+    gap: 18px;
+  }
+  .main--faq .faq--mail .form-preguntas input,
+  .main--faq .faq--mail .form-preguntas textarea {
+    font-size: 1rem;
+  }
+  .main--faq .faq--mail .form-preguntas button {
+    font-size: 1.1rem;
+  }
+  footer {
+    padding: 25px 15px;
+  }
+  footer .footer-container {
+    gap: 35px;
+  }
+  footer .footer-container .footer-section h2 {
+    font-size: 1.8em;
+  }
+  footer .footer-container .footer-section ul li {
+    margin: 9px 0;
+  }
+  footer .footer-container .footer-section a {
+    font-size: 1.15em;
+  }
+  footer .footer-container .footer-section img {
+    width: 45px;
+    height: 45px;
+  }
+  footer .footer-container .footer-section .payment-methods img, footer .footer-container .footer-section .shipping-methods img {
+    width: 55px;
+    height: 55px;
+  }
+}
+@media (max-width: 576px) {
+  body {
+    font-size: 12px;
+  }
+  h1 {
+    font-size: 1.8rem;
+  }
+  h2 {
+    font-size: 1.4rem;
+  }
+  p, label, input, textarea {
+    font-size: 0.9rem;
+  }
+  .header .logo a img {
+    width: 70px;
+  }
+  .header .barra-busqueda {
+    display: none;
+  }
+  .header .header-icons img {
+    width: 30px;
+    height: 30px;
+    margin: 0 5px;
+  }
+  .main--index .destacados .destacados-box .left-button, .main--index .destacados .destacados-box .right-button {
+    width: 50px;
+    height: 50px;
+  }
+  .main--index .destacados .destacados-box .productos .producto {
+    width: 100%;
   }
   .main--index .etiquetas {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr;
   }
-  .main--index .left-button, .main--index .right-button {
+  .main--index .etiquetas .etiquetas-item img {
+    max-height: 200px;
+    aspect-ratio: 1/1;
+  }
+  .main--servicios {
+    padding: 10px;
+  }
+  .main--servicios h1 {
+    font-size: 1.8rem;
+  }
+  .main--servicios h3 {
+    font-size: 1.3rem;
+  }
+  .main--servicios p {
+    font-size: 0.9rem;
+  }
+  .main--contacto {
+    padding: 20px;
+  }
+  .main--contacto div {
+    padding: 20px;
+  }
+  .main--contacto div h1 {
+    font-size: 1.8rem;
+  }
+  .main--contacto div p {
+    font-size: 0.9rem;
+  }
+  .main--contacto div .contacto-form button {
+    font-size: 1rem;
+  }
+  .main--cuenta {
+    flex-direction: column;
+  }
+  .main--cuenta .menu-lateral {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid #ddd;
+  }
+  .main--cuenta .producto {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .main--carrito .carrito-productos .producto-carro {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .main--carrito .carrito-productos .producto-carro img {
     width: 80px;
     height: 80px;
   }
-  .main--faq {
-    padding: 30px 15px;
+  .main--carrito .carrito-productos .producto-carro .eliminar {
+    width: 100%;
+    margin-top: 10px;
   }
-  .main--faq h1 {
-    font-size: 2.5rem;
+  .main--carrito .carrito-total {
+    text-align: center;
   }
-  .main--faq details summary {
+  .main--contacto {
+    padding: 20px 10px;
+  }
+  .main--contacto .contacto-container {
+    padding: 20px;
+  }
+  .main--contacto .contacto-container h1 {
     font-size: 1.8rem;
   }
-  .main--faq details p {
+  .main--contacto .contacto-container p {
+    font-size: 0.9rem;
+  }
+  .main--contacto .contacto-container .contacto-form button {
     font-size: 1rem;
+  }
+  .main--faq {
+    padding: 20px 10px;
+  }
+  .main--faq h1 {
+    font-size: 1.8rem;
+  }
+  .main--faq details summary {
+    font-size: 1.4rem;
+  }
+  .main--faq details p {
+    font-size: 0.8rem;
+  }
+  .main--faq p {
+    font-size: 1rem;
+  }
+  .main--faq .faq--mail {
+    padding: 20px;
+  }
+  .main--faq .faq--mail h3 {
+    font-size: 1.5rem;
+  }
+  .main--faq .faq--mail .form-preguntas {
+    gap: 15px;
+  }
+  .main--faq .faq--mail .form-preguntas input,
+  .main--faq .faq--mail .form-preguntas textarea {
+    font-size: 0.9rem;
+  }
+  .main--faq .faq--mail .form-preguntas button {
+    font-size: 1rem;
+  }
+  footer {
+    padding: 20px 10px;
+  }
+  footer .footer-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+  footer .footer-container .footer-section {
+    min-width: 100%;
+    text-align: center;
+  }
+  footer .footer-container .footer-section h2 {
+    font-size: 1.6em;
+  }
+  footer .footer-container .footer-section ul li {
+    margin: 8px 0;
+  }
+  footer .footer-container .footer-section a {
+    font-size: 1em;
+  }
+  footer .footer-container .footer-section img {
+    width: 40px;
+    height: 40px;
+  }
+  footer .footer-container .footer-section .payment-methods img, footer .footer-container .footer-section .shipping-methods img {
+    width: 50px;
+    height: 50px;
   }
 }
 @media (max-width: 350px) {
@@ -980,6 +1104,12 @@ footer .footer-container .footer-section .payment-methods img, footer .footer-co
   }
   .main--index .destacados .destacados-box .productos .producto {
     width: 120px;
+  }
+  .main--index .etiquetas {
+    grid-template-columns: 1fr;
+  }
+  .main--index .etiquetas .etiquetas-item img {
+    max-height: 150px;
   }
   .main--carrito .producto-carro img {
     width: 70px;
@@ -996,6 +1126,62 @@ footer .footer-container .footer-section .payment-methods img, footer .footer-co
   }
   .main--faq details p {
     font-size: 0.8rem;
+  }
+  .main--faq .faq--mail {
+    padding: 15px;
+  }
+  .main--faq .faq--mail h3 {
+    font-size: 1.3rem;
+  }
+  .main--faq .faq--mail .form-preguntas {
+    gap: 10px;
+  }
+  .main--faq .faq--mail .form-preguntas input,
+  .main--faq .faq--mail .form-preguntas textarea {
+    font-size: 0.8rem;
+    padding: 8px;
+  }
+  .main--faq .faq--mail .form-preguntas button {
+    font-size: 0.9rem;
+    padding: 8px 10px;
+  }
+  .main--contacto {
+    padding: 10px;
+  }
+  .main--contacto .contacto-container {
+    padding: 15px;
+  }
+  .main--contacto .contacto-container h1 {
+    font-size: 1.5rem;
+  }
+  .main--contacto .contacto-container p {
+    font-size: 0.8rem;
+  }
+  .main--contacto .contacto-container .contacto-form button {
+    font-size: 0.9rem;
+  }
+  footer {
+    padding: 15px 5px;
+  }
+  footer .footer-container {
+    gap: 15px;
+  }
+  footer .footer-container .footer-section h2 {
+    font-size: 1.4em;
+  }
+  footer .footer-container .footer-section ul li {
+    margin: 6px 0;
+  }
+  footer .footer-container .footer-section a {
+    font-size: 0.9em;
+  }
+  footer .footer-container .footer-section img {
+    width: 35px;
+    height: 35px;
+  }
+  footer .footer-container .footer-section .payment-methods img, footer .footer-container .footer-section .shipping-methods img {
+    width: 40px;
+    height: 40px;
   }
 }
 
