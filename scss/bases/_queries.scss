@@ -34,21 +34,27 @@
         }
     }
 
-    .destacados .productos .producto {
-        width: 100%;
-    }
+    .main--index {
+        .destacados .destacados-box{
+            .left-button, .right-button {
+                width: 50px;
+                height: 50px;
+            }
 
-    .etiquetas {
-        grid-template-columns: 1fr;
-    }
+            .productos .producto {
+                width: 100%;
+            }
+        }
 
-    .etiquetas-item img {
-        max-height: 200px;
-    }
+        .etiquetas {
+            grid-template-columns: 1fr;
 
-    .left-button, .right-button {
-        width: 50px;
-        height: 50px;
+            .etiquetas-item img {
+                max-height: 200px;
+            }
+        }
+
+        
     }
 
     .main--servicios {
@@ -98,8 +104,60 @@
         }
     }
 
-    .carrito-total {
-        text-align: center;
+    .main--carrito {
+        .carrito-productos .producto-carro {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+
+            img {
+                width: 80px;
+                height: 80px;
+            }
+
+            .eliminar {
+                width: 100%;
+                margin-top: 10px;
+            }
+        }
+
+        .carrito-total {
+            text-align: center;
+        }
+    }
+
+    .main--contacto {
+        padding: 10px;
+
+        h1 {
+            font-size: 2rem;
+        }
+
+        p {
+            font-size: 1rem;
+        }
+    }
+
+    .main--faq {
+        padding: 20px 10px;
+
+        h1 {
+            font-size: 1.8rem;
+        }
+
+        details {
+            summary {
+                font-size: 1.4rem;
+            }
+
+            p {
+                font-size: 0.8rem;
+            }
+        }
+
+        p {
+            font-size: 1rem;
+        }
     }
 
     footer .footer-container {
@@ -145,17 +203,21 @@
         }
     }
 
-    .destacados .productos .producto {
-        width: 48%;
-    }
+    .main--index {
+        .destacados .destacados-box{
+            .left-button, .right-button {
+                width: 60px;
+                height: 60px;
+            }
+            .productos .producto {
+                width: 48%;
+            }
+        }
 
-    .etiquetas {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .left-button, .right-button {
-        width: 60px;
-        height: 60px;
+        .etiquetas {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        
     }
 
     .main--servicios {
@@ -175,7 +237,7 @@
     }
 
     .main--contacto {
-        padding: 20px;
+        padding: 15px;
 
         h1 {
             font-size: 2rem;
@@ -185,44 +247,110 @@
             font-size: 1rem;
         }
     }
+
+    .main--faq {
+        padding: 25px 15px;
+
+        h1 {
+            font-size: 2rem;
+        }
+
+        details {
+            summary {
+                font-size: 1.6rem;
+            }
+
+            p {
+                font-size: 0.9rem;
+            }
+        }
+    }
 }
 
 // Media Queries para pantallas grandes (desktop)
-@media (min-width: 1052px) {
+@media (min-width: 768px) {
     .header {
         .barra-busqueda {
             flex: 1;
         }
     }
 
-    .destacados .productos .producto {
-        width: 23%;
+    .main--index {
+        .destacados .productos .producto {
+            width: 23%;
+        }
+
+        .etiquetas {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        .left-button, .right-button {
+            width: 80px;
+            height: 80px;
+        }
     }
 
-    .etiquetas {
-        grid-template-columns: repeat(3, 1fr);
-    }
+    .main--faq {
+        padding: 30px 15px;
 
-    .left-button, .right-button {
-        width: 80px;
-        height: 80px;
+        h1 {
+            font-size: 2.5rem;
+        }
+
+        details {
+            summary {
+                font-size: 1.8rem;
+            }
+
+            p {
+                font-size: 1rem;
+            }
+        }
     }
 }
 
 // Media Queries para pantallas muy pequeñas (menos de 350px)
 @media (max-width: 350px) {
-    .left-button, .right-button {
-        width: 40px;
-        height: 40px;
-        font-size: 1em;
+    .main--index {
+        .destacados .destacados-box{
+            .left-button, .right-button {
+                width: 40px;
+                height: 40px;
+                font-size: 1em;
+            }
+            .productos {
+                padding: 5px;
+                margin: 0 10px;
+    
+                .producto {
+                    width: 120px;
+                }
+            }
+        }
     }
 
-    .producto {
-        width: 120px;
+    .main--carrito .producto-carro {
+        img {
+            width: 70px;
+            height: 70px;
+        }
     }
 
-    .productos {
-        padding: 5px;
-        margin: 0 10px;
+    .main--faq {
+        padding: 10px 5px;
+
+        h1 {
+            font-size: 1.5rem;
+        }
+
+        details {
+            summary {
+                font-size: 1.2rem;
+            }
+
+            p {
+                font-size: 0.8rem;
+            }
+        }
     }
 }
