@@ -101,6 +101,122 @@ p {
   color: white;
 }
 
+@property --c-0 {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: hsla(55.5882352941, 0%, 100%, 0.86);
+}
+@property --y-0 {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 98%;
+}
+@property --s-start-0 {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 2%;
+}
+@property --s-end-0 {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 78.7257340192%;
+}
+@property --x-0 {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 98%;
+}
+@property --c-1 {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: hsla(284.5588235294, 85%, 73%, 0.42);
+}
+@property --y-1 {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 91%;
+}
+@property --s-start-1 {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 2%;
+}
+@property --s-end-1 {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 78.7257340192%;
+}
+@property --x-1 {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 98%;
+}
+@property --c-2 {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: hsla(181, 85%, 73%, 0.42);
+}
+@property --y-2 {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 87%;
+}
+@property --s-start-2 {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 2%;
+}
+@property --s-end-2 {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 61.2886007797%;
+}
+@property --x-2 {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 16%;
+}
+@property --c-3 {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: hsla(252.7941176471, 85%, 73%, 0.42);
+}
+@property --x-3 {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 52%;
+}
+@property --y-3 {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 79%;
+}
+@property --s-start-3 {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 2%;
+}
+@property --s-end-3 {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 61.2886007797%;
+}
+@keyframes hero-gradient-animation {
+  0% {
+    --c-0: hsla(55.58823529411776, 0%, 100%, 0.86);
+    --y-0: 98%;
+    --s-start-0: 2%;
+    --s-end-0: 78.72573401919361%;
+    --x-0: 98%;
+  }
+  100% {
+    --c-0: hsla(284.55882352941165, 0%, 100%, 0.86);
+    --y-0: 98%;
+    --s-start-0: 2%;
+    --s-end-0: 78.72573401919361%;
+    --x-0: 2%;
+  }
+}
 .main--index .destacados .productos .producto {
   border: 1px solid #ddd;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -275,13 +391,13 @@ main {
   margin: auto;
   cursor: zoom-in;
 }
-.main--prod .zoom-image {
+.main--prod .zoom-container .zoom-image {
   width: 100%;
   height: 100%;
   object-fit: contain;
   transition: transform 0.3s ease;
 }
-.main--prod .zoom-container:hover .zoom-image {
+.main--prod .zoom-container .zoom-image:hover {
   transform: scale(1.5);
 }
 .main--prod button:focus {
@@ -292,6 +408,22 @@ main {
 .main--faq {
   background: rgb(84, 189, 135);
   background: linear-gradient(90deg, rgb(84, 189, 135) 0%, rgba(81, 99, 148, 0.9416141457) 50%, rgb(135, 79, 172) 100%);
+  --c-0: hsla(55.58823529411776, 0%, 100%, 0.86);
+  --y-0: 98%;
+  --x-0: 98%;
+  --c-1: hsla(284.55882352941177, 85%, 73%, 0.42);
+  --y-1: 91%;
+  --x-1: 98%;
+  --x-2: 16%;
+  --c-2: hsla(181.00000000000003, 85%, 73%, 0.42);
+  --y-2: 87%;
+  --c-3: hsla(252.7941176470588, 85%, 73%, 0.42);
+  --x-3: 52%;
+  --y-3: 79%;
+  background-color: hsl(198, 14%, 16%);
+  background-image: radial-gradient(circle at var(--x-0) var(--y-0), var(--c-0) var(--s-start-0), transparent var(--s-end-0)), radial-gradient(circle at var(--x-1) var(--y-1), var(--c-1) var(--s-start-1), transparent var(--s-end-1)), radial-gradient(circle at var(--x-2) var(--y-2), var(--c-2) var(--s-start-2), transparent var(--s-end-2)), radial-gradient(circle at var(--x-3) var(--y-3), var(--c-3) var(--s-start-3), transparent var(--s-end-3));
+  animation: hero-gradient-animation 10s linear infinite alternate;
+  background-blend-mode: overlay, normal, normal, normal;
   padding-bottom: 50px;
   padding-top: 50px;
 }
@@ -405,6 +537,22 @@ details[open] .main--faq details p {
 .main--servicios {
   background: rgb(84, 189, 135);
   background: linear-gradient(90deg, rgb(84, 189, 135) 0%, rgba(81, 99, 148, 0.9416141457) 50%, rgb(135, 79, 172) 100%);
+  --c-0: hsla(55.58823529411776, 0%, 100%, 0.86);
+  --y-0: 98%;
+  --x-0: 98%;
+  --c-1: hsla(284.55882352941177, 85%, 73%, 0.42);
+  --y-1: 91%;
+  --x-1: 98%;
+  --x-2: 16%;
+  --c-2: hsla(181.00000000000003, 85%, 73%, 0.42);
+  --y-2: 87%;
+  --c-3: hsla(252.7941176470588, 85%, 73%, 0.42);
+  --x-3: 52%;
+  --y-3: 79%;
+  background-color: hsl(198, 14%, 16%);
+  background-image: radial-gradient(circle at var(--x-0) var(--y-0), var(--c-0) var(--s-start-0), transparent var(--s-end-0)), radial-gradient(circle at var(--x-1) var(--y-1), var(--c-1) var(--s-start-1), transparent var(--s-end-1)), radial-gradient(circle at var(--x-2) var(--y-2), var(--c-2) var(--s-start-2), transparent var(--s-end-2)), radial-gradient(circle at var(--x-3) var(--y-3), var(--c-3) var(--s-start-3), transparent var(--s-end-3));
+  animation: hero-gradient-animation 10s linear infinite alternate;
+  background-blend-mode: overlay, normal, normal, normal;
   padding-bottom: 50px;
   padding-top: 50px;
 }
@@ -769,7 +917,7 @@ footer .footer-container .footer-section .payment-methods img, footer .footer-co
     height: 80px;
   }
   .main--faq {
-    padding: 30px 15px;
+    padding: 50px 15px;
   }
   .main--faq h1 {
     font-size: 2.5rem;
@@ -794,6 +942,23 @@ footer .footer-container .footer-section .payment-methods img, footer .footer-co
     font-size: 1.1rem;
   }
   .main--faq .faq--mail .form-preguntas button {
+    font-size: 1.2rem;
+  }
+  .main--servicios {
+    padding: 50px 15px;
+  }
+  .main--servicios div {
+    max-width: 1100px;
+    padding: 40px;
+    line-height: 1.8;
+  }
+  .main--servicios div h1 {
+    font-size: 2.5rem;
+  }
+  .main--servicios div h3 {
+    font-size: 2rem;
+  }
+  .main--servicios div p {
     font-size: 1.2rem;
   }
   .main--contacto {
@@ -845,33 +1010,6 @@ footer .footer-container .footer-section .payment-methods img, footer .footer-co
   .main--index .etiquetas {
     grid-template-columns: repeat(2, 1fr);
   }
-  .main--servicios {
-    padding: 15px;
-  }
-  .main--servicios h1 {
-    font-size: 2rem;
-  }
-  .main--servicios h3 {
-    font-size: 1.5rem;
-  }
-  .main--servicios p {
-    font-size: 1rem;
-  }
-  .main--contacto {
-    padding: 15px 10px;
-  }
-  .main--contacto .contacto-container {
-    padding: 30px;
-  }
-  .main--contacto .contacto-container h1 {
-    font-size: 2rem;
-  }
-  .main--contacto .contacto-container p {
-    font-size: 1rem;
-  }
-  .main--contacto .contacto-container .contacto-form button {
-    font-size: 1.1rem;
-  }
   .main--faq {
     padding: 25px 15px;
   }
@@ -898,6 +1036,38 @@ footer .footer-container .footer-section .payment-methods img, footer .footer-co
     font-size: 1rem;
   }
   .main--faq .faq--mail .form-preguntas button {
+    font-size: 1.1rem;
+  }
+  .main--servicios {
+    padding: 25px 15px;
+  }
+  .main--servicios div {
+    max-width: 90%;
+    padding: 25px;
+    line-height: 1.6;
+  }
+  .main--servicios div h1 {
+    font-size: 2rem;
+  }
+  .main--servicios div h3 {
+    font-size: 1.8rem;
+  }
+  .main--servicios div p {
+    font-size: 1rem;
+  }
+  .main--contacto {
+    padding: 15px 10px;
+  }
+  .main--contacto .contacto-container {
+    padding: 30px;
+  }
+  .main--contacto .contacto-container h1 {
+    font-size: 2rem;
+  }
+  .main--contacto .contacto-container p {
+    font-size: 1rem;
+  }
+  .main--contacto .contacto-container .contacto-form button {
     font-size: 1.1rem;
   }
   footer {
@@ -963,15 +1133,20 @@ footer .footer-container .footer-section .payment-methods img, footer .footer-co
     aspect-ratio: 1/1;
   }
   .main--servicios {
-    padding: 10px;
+    padding: 20px 10px;
   }
-  .main--servicios h1 {
+  .main--servicios div {
+    max-width: 100%;
+    padding: 15px;
+    line-height: 1.4;
+  }
+  .main--servicios div h1 {
     font-size: 1.8rem;
   }
-  .main--servicios h3 {
-    font-size: 1.3rem;
+  .main--servicios div h3 {
+    font-size: 1.5rem;
   }
-  .main--servicios p {
+  .main--servicios div p {
     font-size: 0.9rem;
   }
   .main--contacto {
@@ -1144,6 +1319,23 @@ footer .footer-container .footer-section .payment-methods img, footer .footer-co
   .main--faq .faq--mail .form-preguntas button {
     font-size: 0.9rem;
     padding: 8px 10px;
+  }
+  .main--servicios {
+    padding: 10px 5px;
+  }
+  .main--servicios div {
+    max-width: 100%;
+    padding: 10px;
+    line-height: 1.3;
+  }
+  .main--servicios div h1 {
+    font-size: 1.5rem;
+  }
+  .main--servicios div h3 {
+    font-size: 1.2rem;
+  }
+  .main--servicios div p {
+    font-size: 0.8rem;
   }
   .main--contacto {
     padding: 10px;
