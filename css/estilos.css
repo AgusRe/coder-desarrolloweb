@@ -54,6 +54,7 @@ p {
 .header .header-icons a {
   text-decoration: none;
   outline: none;
+  margin-right: 15px;
 }
 .header .logo a img {
   width: 100px;
