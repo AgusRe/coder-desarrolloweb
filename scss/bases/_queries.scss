@@ -83,7 +83,7 @@
     }
 
     .main--contacto {
-        padding: 30px 15px;
+        padding: 50px 15px;
 
         .contacto-container {
             padding: 20px;
@@ -215,7 +215,7 @@
     }
 
     .main--contacto {
-        padding: 15px 10px;
+        padding: 25px 15px;
 
         .contacto-container {
             padding: 30px;
@@ -230,6 +230,61 @@
 
             .contacto-form button {
                 font-size: 1.1rem;
+            }
+        }
+    }
+
+    .main--prod {
+        .prod--orden {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+
+            // Imagen principal (primero)
+            .prod--imagen {
+                order: 1;
+                width: 100%;
+                text-align: center;
+
+                .zoom-container {
+                    height: 500px;
+                    width: 100%;
+                    max-width: 500px;
+                }
+            }
+
+            // Thumbnails (segundo)
+            .prod--thumbnails {
+                order: 2;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                gap: 15px;
+                width: 100%;
+                margin-bottom: 20px;
+
+                .img-thumbnail {
+                    width: 90px;
+                    height: auto;
+                }
+            }
+
+            // Detalles del producto (tercero)
+            .prod--details {
+                order: 3;
+                width: 90%;
+                text-align: center;
+
+                .form-select, .btn {
+                    font-size: 1rem;
+                }
+
+                .btn-dark {
+                    margin-top: 25px;
+                    padding: 10px 20px;
+                }
             }
         }
     }
@@ -287,7 +342,7 @@
 
     .header {
         .logo a img {
-            width: 70px;
+            width: 85px;
         }
 
         .barra-busqueda {
@@ -350,7 +405,7 @@
     }
 
     .main--contacto {
-        padding: 20px;
+        padding: 20px 10px;
 
         div {
             padding: 20px;
@@ -407,24 +462,53 @@
     }
 
     .main--prod {
-    }
-    
-    .main--contacto {
-        padding: 20px 10px;
+        .prod--orden {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
 
-        .contacto-container {
-            padding: 20px;
+            // Imagen principal (primero)
+            .prod--imagen {
+                order: 1;
+                width: 100%;
+                text-align: center;
 
-            h1 {
-                font-size: 1.8rem;
+                .zoom-container {
+                    height: 400px;
+                    width: 100%;
+                    max-width: 400px;
+                }
             }
 
-            p {
-                font-size: 0.9rem;
+            // Thumbnails (segundo)
+            .prod--thumbnails {
+                order: 2;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                gap: 10px;
+                width: 100%;
+                margin-bottom: 15px;
+
+                .img-thumbnail {
+                    width: 80px;
+                }
             }
 
-            .contacto-form button {
-                font-size: 1rem;
+            // Detalles del producto (tercero)
+            .prod--details {
+                order: 3;
+                width: 100%;
+                text-align: center;
+                .form-select, .btn {
+                    font-size: 0.9rem;
+                }
+
+                .btn-dark {
+                    margin-top: 20px;
+                }
             }
         }
     }
@@ -608,7 +692,7 @@
     }
 
     .main--contacto {
-        padding: 10px;
+        padding: 10px 5px;
 
         .contacto-container {
             padding: 15px;

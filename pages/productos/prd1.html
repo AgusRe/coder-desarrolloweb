@@ -98,30 +98,33 @@
     <!-- Este es un ejemplo de cada cómo se vería cada producto -->
     <main class="main main--prod">
         <section class="container py-5">
-            <div class="row">
+            <div class="row prod--orden">
+
                 <!-- Imagenes de muestra del producto -->
-                <div class="col-2">
-                    <div class="d-flex flex-column align-items-center">
-                        <img src="../../img/destacados-producto-1.jpeg" class="img-thumbnail mb-3" alt="Thumbnail de imagen">
+                <div class="col-12 col-md-2 prod--thumbnails">
+                    <div class="d-flex flex-row flex-md-column align-items-center justify-content-center gap-3">
+                        <img src="../../img/destacados-producto-1.jpeg" class="img-thumbnail" alt="Thumbnail de imagen">
                         <img src="../../img/destacados-producto-2.jpeg" class="img-thumbnail" alt="Thumbnail de imagen">
                     </div>
                 </div>
-        
+
                 <!-- Imagen del producto con efecto de zoom -->
-                <div class="col-5 text-center">
+                <div class="col-12 col-md-5 text-center prod--imagen">
                     <div class="zoom-container">
                         <img src="../../img/destacados-producto-1.jpeg" class="zoom-image" alt="Producto principal">
                     </div>
                 </div>
-        
+    
+                
+    
                 <!-- Detalles del producto -->
-                <div class="col-5">
+                <div class="col-12 col-md-5 prod--details">
                     <h1 class="fw-bold">Musculosa Wild Fire</h1>
                     <p class="fs-3">$9500</p>
                     <p><strong>X cuotas sin interés de $Y</strong></p>
                     <p><strong>10% de descuento pagando con TRANSFERENCIA BANCARIA</strong></p>
                     <a href="#" class="text-decoration-none">Ver más detalles</a>
-        
+    
                     <!-- Opciones de color y talla -->
                     <div class="mt-4">
                         <div class="mb-3">
@@ -141,14 +144,14 @@
                             </select>
                         </div>
                     </div>
-        
+    
                     <!-- Controles de cantidad -->
-                    <div class="d-flex align-items-center mb-4">
+                    <div class="d-flex align-items-center mb-4 prod--button">
                         <button class="btn btn-outline-secondary">-</button>
                         <input type="text" class="form-control text-center mx-2" value="1" style="width: 60px;">
                         <button class="btn btn-outline-secondary">+</button>
                     </div>
-        
+    
                     <!-- Botón de agregar al carrito -->
                     <button class="btn btn-dark w-100">AGREGAR AL CARRITO</button>
                 </div>

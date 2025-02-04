@@ -398,7 +398,10 @@ main {
   transition: transform 0.3s ease;
 }
 .main--prod .zoom-container .zoom-image:hover {
-  transform: scale(1.5);
+  transform: scale(1.3);
+}
+.main--prod .mb-4 {
+  justify-content: center !important;
 }
 .main--prod button:focus {
   outline: none;
@@ -424,8 +427,6 @@ main {
   background-image: radial-gradient(circle at var(--x-0) var(--y-0), var(--c-0) var(--s-start-0), transparent var(--s-end-0)), radial-gradient(circle at var(--x-1) var(--y-1), var(--c-1) var(--s-start-1), transparent var(--s-end-1)), radial-gradient(circle at var(--x-2) var(--y-2), var(--c-2) var(--s-start-2), transparent var(--s-end-2)), radial-gradient(circle at var(--x-3) var(--y-3), var(--c-3) var(--s-start-3), transparent var(--s-end-3));
   animation: hero-gradient-animation 10s linear infinite alternate;
   background-blend-mode: overlay, normal, normal, normal;
-  padding-bottom: 50px;
-  padding-top: 50px;
 }
 .main--faq div {
   align-items: center;
@@ -553,8 +554,6 @@ details[open] .main--faq details p {
   background-image: radial-gradient(circle at var(--x-0) var(--y-0), var(--c-0) var(--s-start-0), transparent var(--s-end-0)), radial-gradient(circle at var(--x-1) var(--y-1), var(--c-1) var(--s-start-1), transparent var(--s-end-1)), radial-gradient(circle at var(--x-2) var(--y-2), var(--c-2) var(--s-start-2), transparent var(--s-end-2)), radial-gradient(circle at var(--x-3) var(--y-3), var(--c-3) var(--s-start-3), transparent var(--s-end-3));
   animation: hero-gradient-animation 10s linear infinite alternate;
   background-blend-mode: overlay, normal, normal, normal;
-  padding-bottom: 50px;
-  padding-top: 50px;
 }
 .main--servicios div {
   align-items: center;
@@ -595,11 +594,10 @@ details[open] .main--faq details p {
 .main--contacto {
   background: rgb(84, 189, 135);
   background: linear-gradient(90deg, rgb(84, 189, 135) 0%, rgba(81, 99, 148, 0.94) 50%, rgb(135, 79, 172) 100%);
-  padding: 50px 0;
 }
 .main--contacto div {
   max-width: 800px;
-  margin: 50px auto;
+  margin: 0px auto;
   padding: 40px;
   background-color: #f9f9f9;
   border-radius: 10px;
@@ -962,7 +960,7 @@ footer .footer-container .footer-section .payment-methods img, footer .footer-co
     font-size: 1.2rem;
   }
   .main--contacto {
-    padding: 30px 15px;
+    padding: 50px 15px;
   }
   .main--contacto .contacto-container {
     padding: 20px;
@@ -1056,7 +1054,7 @@ footer .footer-container .footer-section .payment-methods img, footer .footer-co
     font-size: 1rem;
   }
   .main--contacto {
-    padding: 15px 10px;
+    padding: 25px 15px;
   }
   .main--contacto .contacto-container {
     padding: 30px;
@@ -1069,6 +1067,48 @@ footer .footer-container .footer-section .payment-methods img, footer .footer-co
   }
   .main--contacto .contacto-container .contacto-form button {
     font-size: 1.1rem;
+  }
+  .main--prod .prod--orden {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  .main--prod .prod--orden .prod--imagen {
+    order: 1;
+    width: 100%;
+    text-align: center;
+  }
+  .main--prod .prod--orden .prod--imagen .zoom-container {
+    height: 500px;
+    width: 100%;
+    max-width: 500px;
+  }
+  .main--prod .prod--orden .prod--thumbnails {
+    order: 2;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .main--prod .prod--orden .prod--thumbnails .img-thumbnail {
+    width: 90px;
+    height: auto;
+  }
+  .main--prod .prod--orden .prod--details {
+    order: 3;
+    width: 90%;
+    text-align: center;
+  }
+  .main--prod .prod--orden .prod--details .form-select, .main--prod .prod--orden .prod--details .btn {
+    font-size: 1rem;
+  }
+  .main--prod .prod--orden .prod--details .btn-dark {
+    margin-top: 25px;
+    padding: 10px 20px;
   }
   footer {
     padding: 25px 15px;
@@ -1108,7 +1148,7 @@ footer .footer-container .footer-section .payment-methods img, footer .footer-co
     font-size: 0.9rem;
   }
   .header .logo a img {
-    width: 70px;
+    width: 85px;
   }
   .header .barra-busqueda {
     display: none;
@@ -1150,7 +1190,7 @@ footer .footer-container .footer-section .payment-methods img, footer .footer-co
     font-size: 0.9rem;
   }
   .main--contacto {
-    padding: 20px;
+    padding: 20px 10px;
   }
   .main--contacto div {
     padding: 20px;
@@ -1192,20 +1232,45 @@ footer .footer-container .footer-section .payment-methods img, footer .footer-co
   .main--carrito .carrito-total {
     text-align: center;
   }
-  .main--contacto {
-    padding: 20px 10px;
+  .main--prod .prod--orden {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
   }
-  .main--contacto .contacto-container {
-    padding: 20px;
+  .main--prod .prod--orden .prod--imagen {
+    order: 1;
+    width: 100%;
+    text-align: center;
   }
-  .main--contacto .contacto-container h1 {
-    font-size: 1.8rem;
+  .main--prod .prod--orden .prod--imagen .zoom-container {
+    height: 400px;
+    width: 100%;
+    max-width: 400px;
   }
-  .main--contacto .contacto-container p {
+  .main--prod .prod--orden .prod--thumbnails {
+    order: 2;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  .main--prod .prod--orden .prod--thumbnails .img-thumbnail {
+    width: 80px;
+  }
+  .main--prod .prod--orden .prod--details {
+    order: 3;
+    width: 100%;
+    text-align: center;
+  }
+  .main--prod .prod--orden .prod--details .form-select, .main--prod .prod--orden .prod--details .btn {
     font-size: 0.9rem;
   }
-  .main--contacto .contacto-container .contacto-form button {
-    font-size: 1rem;
+  .main--prod .prod--orden .prod--details .btn-dark {
+    margin-top: 20px;
   }
   .main--faq {
     padding: 20px 10px;
@@ -1338,7 +1403,7 @@ footer .footer-container .footer-section .payment-methods img, footer .footer-co
     font-size: 0.8rem;
   }
   .main--contacto {
-    padding: 10px;
+    padding: 10px 5px;
   }
   .main--contacto .contacto-container {
     padding: 15px;
