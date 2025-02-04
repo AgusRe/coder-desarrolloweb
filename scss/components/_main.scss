@@ -219,7 +219,7 @@ main {
     .mb-4 {
         justify-content: center !important;
     }
-    
+
     button:focus {
         outline: none;
         box-shadow: none;
@@ -705,4 +705,64 @@ main {
 
 .main--productos {
     background-color: #f9f9f9;
+
+    h2 {
+        font-size: 2rem;
+        font-weight: bold;
+        margin-bottom: 2rem;
+        color: #333;
+    }
+
+    .card {
+        border-radius: 10px;
+        overflow: hidden;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        background-color: #fff;
+
+        &:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .card-img-top {
+            border-radius: 10px 10px 0 0;
+            transition: transform 0.3s ease;
+
+            &:hover {
+                transform: scale(1.05);
+            }
+        }
+
+        .card-body {
+            padding: 1.5rem;
+            text-align: center;
+
+            .card-title {
+                font-size: 1.25rem;
+                font-weight: bold;
+                margin-bottom: 0.75rem;
+                color: #333;
+            }
+
+            .card-text {
+                font-size: 0.9rem;
+                color: #666;
+                margin-bottom: 1rem;
+            }
+
+            .btn-primary {
+                background-color: #007bff;
+                border: none;
+                border-radius: 25px;
+                padding: 0.5rem 1.5rem;
+                font-size: 0.9rem;
+                transition: background-color 0.3s ease, transform 0.3s ease;
+
+                &:hover {
+                    background-color: #0056b3;
+                    transform: translateY(-2px);
+                }
+            }
+        }
+    }
 }
